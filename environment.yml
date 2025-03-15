@@ -1,0 +1,21 @@
+name: tot-dev
+channels:
+  - conda-forge
+dependencies:
+  - python>=3.11
+  - tqdm
+  - networkx
+  # QA
+  - pytest
+  # Scientific packages
+  - numpy
+  - matplotlib
+  - scipy
+  # Jupyter Notebooks
+  - jupyterlab
+  - notebook
+  - ipywidgets
+  - jupytext
+  - nbdev
+  # Formatting
+  - black
