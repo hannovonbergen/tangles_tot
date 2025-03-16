@@ -18,7 +18,7 @@ class TextTerm:
         if isinstance(source, MetaData):
             if source.next is not None:
                 warnings.warn(
-                    f"metadata object {source} has other options, using {source.info} and not {source.next.info}"
+                    f"metadata object has other options, which were associated to the same feature. Using {source.info} and not {source.next.info} for the logic terms."
                 )
             return (
                 TextTerm(text=str(source.info))
