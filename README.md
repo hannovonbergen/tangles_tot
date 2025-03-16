@@ -11,3 +11,13 @@ You can validate that you have all necessary dependencies by running our test su
 ```bash
 pytest
 ```
+
+#Documentation
+
+The Documentation can be found in the docs folder. 
+
+It is generated using pdoc with the following command.
+
+```bash
+pdoc tangles_tot -o ./docs
+```

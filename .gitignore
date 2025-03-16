@@ -3,3 +3,4 @@
 tangles
 
 **/*.pyc
+**/.DS_Store
