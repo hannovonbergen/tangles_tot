@@ -19,3 +19,6 @@ dependencies:
   - nbdev
   # Formatting
   - black
+  # Documentation
+  - pdoc
+  - nbconvert
