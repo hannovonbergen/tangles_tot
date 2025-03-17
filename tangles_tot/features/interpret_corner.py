@@ -14,10 +14,14 @@ def interpret_feature_array(
     metadata: list[MetaDataType],
     under_condition: Optional[FeatureArray] = None,
 ) -> TextTerm:
-    rec_log = _RecursionLogic(original_features, metadata, feature)
-    starting_approximation = np.ones(feature.shape, dtype=np.int8)
+    if under_condition is None:
+        under_condition = np.ones(feature.shape[0], dtype=np.int8)
+    rec_log = _RecursionLogic(
+        original_features[under_condition == 1], metadata, feature[under_condition == 1]
+    )
+    starting_approximation = np.ones(feature.shape, dtype=np.int8)[under_condition == 1]
     return array_to_term_recursive(
-        sep=feature,
+        sep=feature[under_condition == 1],
         approximation=starting_approximation,
         next_term=_SemanticTextTerm.true(len(starting_approximation)),
         rec_log=rec_log,
@@ -29,7 +33,26 @@ def interpret_feature(
     feat_sys: Union[FeatureSystem, UncrossingFeatureSystem],
     under_condition: Optional[list[Feature]] = None,
 ) -> TextTerm:
-    pass
+    if isinstance(feat_sys, FeatureSystem):
+        feat_sys = UncrossingFeatureSystem.from_feature_system(feat_sys)
+    if under_condition is None:
+        under_condition_feature = None
+    else:
+        condition_ids = []
+        condition_spec = []
+        for id, spec in under_condition:
+            condition_ids.append(id)
+            condition_spec.append(spec)
+        under_condition_feature = feat_sys.compute_infimum(
+            condition_ids, condition_spec
+        )
+        print(under_condition_feature)
+    return interpret_feature_array(
+        feature=feat_sys.get_feature(feature),
+        original_features=feat_sys.get_original_features(),
+        metadata=feat_sys.get_metadata_of_original_features(),
+        under_condition=under_condition_feature,
+    )
 
 
 def array_to_term_recursive(
