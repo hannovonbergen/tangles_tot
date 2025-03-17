@@ -19,5 +19,5 @@ The Documentation can be found in the docs folder.
 It is generated using pdoc with the following command.
 
 ```bash
-pdoc tangles_tot -o ./docs
+pdoc tangles_tot -d google -o ./docs
 ```
