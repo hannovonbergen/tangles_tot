@@ -97,7 +97,6 @@ def interpret_feature(
         under_condition_feature = feat_sys.compute_infimum(
             condition_ids, condition_spec
         )
-        print(under_condition_feature)
     return interpret_feature_array(
         feature=feat_sys.get_feature(feature),
         original_features=feat_sys.get_original_features(),

@@ -21,3 +21,4 @@ dependencies:
   - black
   # Documentation
   - pdoc
+  - nbconvert
