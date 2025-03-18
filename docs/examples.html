@@ -52,6 +52,7 @@
 
         <h2>Contents</h2>
         <ul>
+  <li><a href="#tree-of-tangles">Tree of Tangles</a></li>
   <li><a href="#interpret-corners">Interpret Corners</a>
   <ul>
     <li><a href="#features-and-logic-terms">Features and Logic Terms</a></li>
@@ -76,7 +77,24 @@
                     <h1 class="modulename">
 examples    </h1>
 
-                        <div class="docstring"><h1 id="interpret-corners">Interpret Corners</h1>
+                        <div class="docstring"><h1 id="tree-of-tangles">Tree of Tangles</h1>
+
+<div class="pdoc-code codehilite">
+<pre><span></span><code><span class="kn">from</span> <span class="nn">tangles_tot._testing.feature_trees</span> <span class="kn">import</span> <span class="n">three_star</span>
+<span class="kn">from</span> <span class="nn"><a href="tangles_tot/plot.html">tangles_tot.plot</a></span> <span class="kn">import</span> <span class="n">plot_feature_tree</span>
+
+<span class="n">plot_feature_tree</span><span class="p">(</span><span class="n">three_star</span><span class="p">(</span><span class="kc">True</span><span class="p">))</span>
+</code></pre>
+</div>
+
+<p><img src="tree_of_tangles_files/tree_of_tangles_1_0.png" alt="png" /></p>
+
+<div class="pdoc-code codehilite">
+<pre><span></span><code>
+</code></pre>
+</div>
+
+<h1 id="interpret-corners">Interpret Corners</h1>
 
 <p>After uncrossing the efficient distinguishers with the tree of tangles algorithm we often have the problem of the efficient distinguishers not being features we originally added to the feature system but instead corners, or even worse, corners of corners of corners... </p>
 
@@ -185,8 +203,9 @@ not (a or b) under condition not a    ¬B
                         <label class="view-source-button" for="mod-examples-view-source"><span>View Source</span></label>
 
                         <div class="pdoc-code codehilite"><pre><span></span><span id="L-1"><a href="#L-1"><span class="linenos">1</span></a><span class="sd">&quot;&quot;&quot;</span>
-</span><span id="L-2"><a href="#L-2"><span class="linenos">2</span></a><span class="sd">.. include:: ../docs/converted_notebooks/interpret_corners.md</span>
-</span><span id="L-3"><a href="#L-3"><span class="linenos">3</span></a><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-2"><a href="#L-2"><span class="linenos">2</span></a><span class="sd">.. include:: ../docs/converted_notebooks/tree_of_tangles.md</span>
+</span><span id="L-3"><a href="#L-3"><span class="linenos">3</span></a><span class="sd">.. include:: ../docs/converted_notebooks/interpret_corners.md</span>
+</span><span id="L-4"><a href="#L-4"><span class="linenos">4</span></a><span class="sd">&quot;&quot;&quot;</span>
 </span></pre></div>
 
 

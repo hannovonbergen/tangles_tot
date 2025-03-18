@@ -1,6 +1,7 @@
 from typing import Any, Optional, Union
 import numpy as np
-from tangles_tot._tangles_lib import FeatureSystem, INF_LABEL, Feature, MetaData
+from tangles_tot._tangles_lib import FeatureSystem, INF_LABEL, MetaData
+from tangles_tot._typing import Feature
 
 
 class UncrossingFeatureSystem:
