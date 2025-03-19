@@ -95,3 +95,39 @@ def test_interpret_feature_under_condition(FeatSys):
     a_and_b = (id_array[3], spec_array[3])
     assert str(interpret_feature(a_and_b, feat_sys, under_condition=[(0, 1)])) == "b"
     assert str(interpret_feature(a_or_b, feat_sys, under_condition=[(1, -1)])) == "a"
+
+
+@pytest.mark.parametrize("FeatSys", feature_systems)
+def test_interpret_feature_under_empty_condition(FeatSys):
+    num_features = 10
+    feature_length = 100
+    number_of_corners = 100
+    features = generate_random_features(num_features, feature_length)
+    metadata = ["a", "b"] + [str(i) for i in range(2, num_features)]
+    feat_sys = FeatSys.with_array(features, metadata=metadata)
+    add_random_corners_to_feat_sys(feat_sys, number_of_corners)
+    assert str(interpret_feature((0, 1), feat_sys, under_condition=[])) == "a"
+    assert str(interpret_feature((1, 1), feat_sys, under_condition=[])) == "b"
+
+
+@pytest.mark.parametrize("FeatSys", feature_systems)
+def test_interpret_feature_under_weird_conditions(FeatSys):
+    num_features = 10
+    feature_length = 100
+    number_of_corners = 100
+    features = generate_random_features(num_features, feature_length)
+    metadata = ["a", "b"] + [str(i) for i in range(2, num_features)]
+    feat_sys = FeatSys.with_array(features, metadata=metadata)
+    add_random_corners_to_feat_sys(feat_sys, number_of_corners)
+    assert str(interpret_feature((1, 1), feat_sys, under_condition=[(1, 1)])) == "true"
+    assert (
+        str(interpret_feature((1, 1), feat_sys, under_condition=[(1, -1)])) == "false"
+    )
+    assert (
+        str(interpret_feature((0, 1), feat_sys, under_condition=[(0, 1), (0, -1)]))
+        == "true"
+    )
+    assert (
+        str(interpret_feature((0, 1), feat_sys, under_condition=[(0, 1), (1, 1)]))
+        == "true"
+    )

@@ -1,6 +1,6 @@
 from typing import Any, Optional, Union
 import numpy as np
-from tangles_tot._tangles_lib import FeatureSystem, INF_LABEL, MetaData
+from tangles_tot._tangles_lib import FeatureSystem, CUSTOM_LABEL, INF_LABEL, MetaData
 from tangles_tot._typing import Feature
 
 
@@ -31,14 +31,22 @@ class UncrossingFeatureSystem:
     @staticmethod
     def from_feature_system(feat_sys: FeatureSystem) -> "UncrossingFeatureSystem":
         original_ids = []
+        corner_ids = []
         for i in range(len(feat_sys)):
             metadata = feat_sys.feature_metadata(i)
             while metadata:
-                if metadata.type == INF_LABEL:
+                if metadata.type == CUSTOM_LABEL:
+                    original_ids.append(i)
                     break
+                if metadata.type == INF_LABEL:
+                    corner_ids.append(i)
                 metadata = metadata.next
-            if not metadata:
-                original_ids.append(i)
+        if len(original_ids) == 0 and len(corner_ids) == 0:
+            original_ids = list(range(len(feat_sys)))
+        if len(original_ids) == 0:
+            raise Exception(
+                "could not determine which features were added by uncrossing and which were added by user. You can fix this by adding metadata to your features."
+            )
         return UncrossingFeatureSystem(
             feat_sys=feat_sys,
             original_ids=original_ids,
@@ -67,6 +75,9 @@ class UncrossingFeatureSystem:
         specifications: Union[np.ndarray, list[int]],
     ):
         return self._feat_sys.compute_infimum(feat_ids, specifications)
+
+    def __getitem__(self, name):
+        return self._feat_sys.__getitem__(name)
 
     def get_number_of_original_features(self) -> int:
         return len(self._original_ids)
