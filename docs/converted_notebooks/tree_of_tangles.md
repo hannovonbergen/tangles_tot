@@ -3,9 +3,11 @@
 
 ```python
 from tangles_tot._testing.feature_trees import three_star
-from tangles_tot.plot import plot_feature_tree
+from tangles_tot.plot import plot_tree_of_tangles
+from tangles_tot.tree import TreeOfTangles
 
-plot_feature_tree(three_star(True))
+tree_of_tangles = TreeOfTangles(three_star(False))
+plot_tree_of_tangles(tree_of_tangles.default_specification())
 ```
 
 
@@ -13,8 +15,3 @@ plot_feature_tree(three_star(True))
 ![png](tree_of_tangles_files/tree_of_tangles_1_0.png)
     
 
-
-
-```python
-
-```

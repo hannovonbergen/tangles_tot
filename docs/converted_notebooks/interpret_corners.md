@@ -59,8 +59,8 @@ print("a and b", a_and_b)
 print("a or b", a_or_b)
 ```
 
-    a and b (5, 1)
-    a or b (2, -1)
+    a and b (np.int64(5), np.int8(1))
+    a or b (np.int64(2), np.int8(-1))
 
 
 

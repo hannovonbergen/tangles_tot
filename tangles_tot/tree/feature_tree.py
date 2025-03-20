@@ -3,14 +3,14 @@ from typing import Optional
 from tangles_tot._typing import Specification, Feature, FeatureId, TangleId
 
 
-@dataclass
+@dataclass(frozen=True)
 class FeatureEdge:
     feature_id: FeatureId
     specification: Optional[Specification]
     label: str
 
 
-@dataclass
+@dataclass(frozen=True)
 class Location:
     features: list[Feature]
     associated_tangle: Optional[TangleId]
@@ -57,6 +57,24 @@ class FeatureTree:
             return self._locations_of_edge[feature[0]][0]
         if feature[1] == -1:
             return self._locations_of_edge[feature[0]][1]
+        raise ValueError(f"feature variable {feature} of type Feature has invalid form")
 
     def get_node_idx_of_location_containing(self, feature: Feature) -> int:
         return self.get_location_containing(feature).node_idx
+
+    def with_specification(
+        self, specification: Optional[dict[FeatureId, Specification]]
+    ) -> "FeatureTree":
+        specification = specification or {}
+        return FeatureTree(
+            _edges={
+                feature_id: FeatureEdge(
+                    feature_id=feature_id,
+                    specification=specification.get(feature_id, None),
+                    label=self._edges[feature_id].label,
+                )
+                for feature_id in self.feature_ids()
+            },
+            _locations=self._locations,
+            _locations_of_edge=self._locations_of_edge,
+        )

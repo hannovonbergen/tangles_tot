@@ -2,10 +2,12 @@ from .feature_tree import FeatureTree
 
 
 class TreeOfTangles:
-    @property
-    def feature_tree(self) -> FeatureTree:
-        pass
+    def __init__(self, feature_tree: FeatureTree):
+        self.feature_tree = feature_tree
 
-    @property
     def default_specification(self) -> FeatureTree:
-        pass
+        return self.feature_tree.with_specification(
+            specification={
+                feature_id: 1 for feature_id in self.feature_tree.feature_ids()
+            }
+        )

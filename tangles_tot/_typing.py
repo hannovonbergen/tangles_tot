@@ -1,13 +1,8 @@
-from enum import Enum
-from typing import Union
+from typing import Union, Literal
 
 FeatureId = int
 
-
-class Specification(Enum):
-    DEFAULT = 1
-    INVERSE = -1
-
+Specification = Union[Literal[1], Literal[-1]]
 
 Feature = tuple[FeatureId, Specification]
 
