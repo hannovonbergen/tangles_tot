@@ -12,6 +12,6 @@ plot_tree_of_tangles(tree_of_tangles.default_specification())
 
 
     
-![png](tree_of_tangles_files/tree_of_tangles_1_0.png)
+![png](../docs/converted_notebooks/tree_of_tangles_files/tree_of_tangles_1_0.png)
     
 

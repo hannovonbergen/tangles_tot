@@ -27,17 +27,12 @@ import numpy as np
 from tangles_tot.features import interpret_feature
 from tangles.separations.system import FeatureSystem
 
-#building a feature system feat_sys which contains two features: A and B
+# building a feature system feat_sys which contains two features: A and B
 features = np.array(
-    [
-        [1, -1],
-        [1, 1],
-        [-1, 1],
-        [-1, -1]
-    ],
+    [[1, -1], [1, 1], [-1, 1], [-1, -1]],
 )
 metadata = ["A", "B"]
-feat_sys = FeatureSystem.with_array(features, metadata = metadata)
+feat_sys = FeatureSystem.with_array(features, metadata=metadata)
 len(feat_sys)
 ```
 
@@ -50,7 +45,9 @@ len(feat_sys)
 
 
 ```python
-corner_ids, corner_specifications = feat_sys.get_corners(0, 1) #adding two corners to feat_sys
+corner_ids, corner_specifications = feat_sys.get_corners(
+    0, 1
+)  # adding two corners to feat_sys
 # the index 3 corresponds to the infimum of (0, 1) and (1, 1)
 a_and_b = (corner_ids[3], corner_specifications[3])
 # the index 0 corresponds to the infimum of (0, -1) and (1, -1), the inverse of "a or b"
@@ -95,9 +92,18 @@ Similarly for the other feature $A \cup B$ under the condition $A$ is not intere
 
 
 ```python
-print("a and b under condition a   ", interpret_feature(a_and_b, feat_sys, under_condition=[(0, 1)]))
-print("a or b under condition a   ", interpret_feature(a_or_b, feat_sys, under_condition=[(0, 1)]))
-print("not (a or b) under condition not a   ", interpret_feature((a_or_b[0], -a_or_b[1]), feat_sys, under_condition=[(0, -1)]))
+print(
+    "a and b under condition a   ",
+    interpret_feature(a_and_b, feat_sys, under_condition=[(0, 1)]),
+)
+print(
+    "a or b under condition a   ",
+    interpret_feature(a_or_b, feat_sys, under_condition=[(0, 1)]),
+)
+print(
+    "not (a or b) under condition not a   ",
+    interpret_feature((a_or_b[0], -a_or_b[1]), feat_sys, under_condition=[(0, -1)]),
+)
 ```
 
     a and b under condition a    B
