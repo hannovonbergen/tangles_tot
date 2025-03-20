@@ -80,20 +80,26 @@
                     <h1 class="modulename">
 <a href="./../tangles_tot.html">tangles_tot</a><wbr>.plot    </h1>
 
-                
+                        <div class="docstring"><p>A module providing functions and tools for visualising and plotting trees of tangles.</p>
+</div>
+
                         <input id="mod-plot-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
 
                         <label class="view-source-button" for="mod-plot-view-source"><span>View Source</span></label>
 
-                        <div class="pdoc-code codehilite"><pre><span></span><span id="L-1"><a href="#L-1"><span class="linenos">1</span></a><span class="kn">from</span><span class="w"> </span><span class="nn">.feature_tree</span><span class="w"> </span><span class="kn">import</span> <span class="n">plot_feature_tree</span><span class="p">,</span> <span class="n">plot_tree_of_tangles</span>
-</span><span id="L-2"><a href="#L-2"><span class="linenos">2</span></a><span class="kn">from</span><span class="w"> </span><span class="nn">.networkx_plot</span><span class="w"> </span><span class="kn">import</span> <span class="n">NXTree</span><span class="p">,</span> <span class="n">feature_tree_to_nx</span>
-</span><span id="L-3"><a href="#L-3"><span class="linenos">3</span></a>
-</span><span id="L-4"><a href="#L-4"><span class="linenos">4</span></a><span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
-</span><span id="L-5"><a href="#L-5"><span class="linenos">5</span></a>    <span class="s2">&quot;plot_feature_tree&quot;</span><span class="p">,</span>
-</span><span id="L-6"><a href="#L-6"><span class="linenos">6</span></a>    <span class="s2">&quot;NXTree&quot;</span><span class="p">,</span>
-</span><span id="L-7"><a href="#L-7"><span class="linenos">7</span></a>    <span class="s2">&quot;feature_tree_to_nx&quot;</span><span class="p">,</span>
-</span><span id="L-8"><a href="#L-8"><span class="linenos">8</span></a>    <span class="s2">&quot;plot_tree_of_tangles&quot;</span><span class="p">,</span>
-</span><span id="L-9"><a href="#L-9"><span class="linenos">9</span></a><span class="p">]</span>
+                        <div class="pdoc-code codehilite"><pre><span></span><span id="L-1"><a href="#L-1"><span class="linenos"> 1</span></a><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-2"><a href="#L-2"><span class="linenos"> 2</span></a><span class="sd">A module providing functions and tools for visualising and plotting trees of tangles.</span>
+</span><span id="L-3"><a href="#L-3"><span class="linenos"> 3</span></a><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-4"><a href="#L-4"><span class="linenos"> 4</span></a>
+</span><span id="L-5"><a href="#L-5"><span class="linenos"> 5</span></a><span class="kn">from</span><span class="w"> </span><span class="nn">.feature_tree</span><span class="w"> </span><span class="kn">import</span> <span class="n">plot_feature_tree</span><span class="p">,</span> <span class="n">plot_tree_of_tangles</span>
+</span><span id="L-6"><a href="#L-6"><span class="linenos"> 6</span></a><span class="kn">from</span><span class="w"> </span><span class="nn">.networkx_plot</span><span class="w"> </span><span class="kn">import</span> <span class="n">NXTree</span><span class="p">,</span> <span class="n">feature_tree_to_nx</span>
+</span><span id="L-7"><a href="#L-7"><span class="linenos"> 7</span></a>
+</span><span id="L-8"><a href="#L-8"><span class="linenos"> 8</span></a><span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="L-9"><a href="#L-9"><span class="linenos"> 9</span></a>    <span class="s2">&quot;plot_feature_tree&quot;</span><span class="p">,</span>
+</span><span id="L-10"><a href="#L-10"><span class="linenos">10</span></a>    <span class="s2">&quot;NXTree&quot;</span><span class="p">,</span>
+</span><span id="L-11"><a href="#L-11"><span class="linenos">11</span></a>    <span class="s2">&quot;feature_tree_to_nx&quot;</span><span class="p">,</span>
+</span><span id="L-12"><a href="#L-12"><span class="linenos">12</span></a>    <span class="s2">&quot;plot_tree_of_tangles&quot;</span><span class="p">,</span>
+</span><span id="L-13"><a href="#L-13"><span class="linenos">13</span></a><span class="p">]</span>
 </span></pre></div>
 
 
@@ -110,26 +116,54 @@
     </div>
     <a class="headerlink" href="#plot_feature_tree"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="plot_feature_tree-8"><a href="#plot_feature_tree-8"><span class="linenos"> 8</span></a><span class="k">def</span><span class="w"> </span><span class="nf">plot_feature_tree</span><span class="p">(</span><span class="n">feature_tree</span><span class="p">:</span> <span class="n">FeatureTree</span><span class="p">,</span> <span class="n">ax</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-</span><span id="plot_feature_tree-9"><a href="#plot_feature_tree-9"><span class="linenos"> 9</span></a>    <span class="n">graph</span> <span class="o">=</span> <span class="n">feature_tree_to_nx</span><span class="p">(</span><span class="n">feature_tree</span><span class="p">)</span>
-</span><span id="plot_feature_tree-10"><a href="#plot_feature_tree-10"><span class="linenos">10</span></a>    <span class="n">pos</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">kamada_kawai_layout</span><span class="p">(</span><span class="n">graph</span><span class="p">)</span>
-</span><span id="plot_feature_tree-11"><a href="#plot_feature_tree-11"><span class="linenos">11</span></a>    <span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_nodes</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="n">pos</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
-</span><span id="plot_feature_tree-12"><a href="#plot_feature_tree-12"><span class="linenos">12</span></a>    <span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_edges</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="n">pos</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
-</span><span id="plot_feature_tree-13"><a href="#plot_feature_tree-13"><span class="linenos">13</span></a>    <span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_labels</span><span class="p">(</span>
-</span><span id="plot_feature_tree-14"><a href="#plot_feature_tree-14"><span class="linenos">14</span></a>        <span class="n">graph</span><span class="p">,</span>
-</span><span id="plot_feature_tree-15"><a href="#plot_feature_tree-15"><span class="linenos">15</span></a>        <span class="n">pos</span><span class="o">=</span><span class="n">pos</span><span class="p">,</span>
-</span><span id="plot_feature_tree-16"><a href="#plot_feature_tree-16"><span class="linenos">16</span></a>        <span class="n">labels</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">graph</span><span class="o">.</span><span class="n">nodes</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="s2">&quot;label&quot;</span><span class="p">)),</span>
-</span><span id="plot_feature_tree-17"><a href="#plot_feature_tree-17"><span class="linenos">17</span></a>        <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
-</span><span id="plot_feature_tree-18"><a href="#plot_feature_tree-18"><span class="linenos">18</span></a>    <span class="p">)</span>
-</span><span id="plot_feature_tree-19"><a href="#plot_feature_tree-19"><span class="linenos">19</span></a>    <span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_edge_labels</span><span class="p">(</span>
-</span><span id="plot_feature_tree-20"><a href="#plot_feature_tree-20"><span class="linenos">20</span></a>        <span class="n">graph</span><span class="p">,</span>
-</span><span id="plot_feature_tree-21"><a href="#plot_feature_tree-21"><span class="linenos">21</span></a>        <span class="n">pos</span><span class="o">=</span><span class="n">pos</span><span class="p">,</span>
-</span><span id="plot_feature_tree-22"><a href="#plot_feature_tree-22"><span class="linenos">22</span></a>        <span class="n">edge_labels</span><span class="o">=</span><span class="p">{(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span> <span class="n">label</span> <span class="k">for</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">label</span><span class="p">)</span> <span class="ow">in</span> <span class="n">graph</span><span class="o">.</span><span class="n">edges</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="s2">&quot;label&quot;</span><span class="p">)},</span>
-</span><span id="plot_feature_tree-23"><a href="#plot_feature_tree-23"><span class="linenos">23</span></a>        <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
-</span><span id="plot_feature_tree-24"><a href="#plot_feature_tree-24"><span class="linenos">24</span></a>    <span class="p">)</span>
+</span><span id="plot_feature_tree-9"><a href="#plot_feature_tree-9"><span class="linenos"> 9</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="plot_feature_tree-10"><a href="#plot_feature_tree-10"><span class="linenos">10</span></a><span class="sd">    Plot the tree structure of the feature tree.</span>
+</span><span id="plot_feature_tree-11"><a href="#plot_feature_tree-11"><span class="linenos">11</span></a>
+</span><span id="plot_feature_tree-12"><a href="#plot_feature_tree-12"><span class="linenos">12</span></a><span class="sd">    The edges of the plotted tree correspond to the features in the feature tree.</span>
+</span><span id="plot_feature_tree-13"><a href="#plot_feature_tree-13"><span class="linenos">13</span></a><span class="sd">    If the features are not specified, i.e. they are potential features,</span>
+</span><span id="plot_feature_tree-14"><a href="#plot_feature_tree-14"><span class="linenos">14</span></a><span class="sd">    then neither are the edges of the tree are undirected.</span>
+</span><span id="plot_feature_tree-15"><a href="#plot_feature_tree-15"><span class="linenos">15</span></a><span class="sd">    If the features are specified, then the edges are directed - pointing</span>
+</span><span id="plot_feature_tree-16"><a href="#plot_feature_tree-16"><span class="linenos">16</span></a><span class="sd">    towards the feature.</span>
+</span><span id="plot_feature_tree-17"><a href="#plot_feature_tree-17"><span class="linenos">17</span></a>
+</span><span id="plot_feature_tree-18"><a href="#plot_feature_tree-18"><span class="linenos">18</span></a><span class="sd">    Args:</span>
+</span><span id="plot_feature_tree-19"><a href="#plot_feature_tree-19"><span class="linenos">19</span></a><span class="sd">        feature_tree: The feature tree to plot.</span>
+</span><span id="plot_feature_tree-20"><a href="#plot_feature_tree-20"><span class="linenos">20</span></a><span class="sd">        ax: Optional matplotlib axis object.</span>
+</span><span id="plot_feature_tree-21"><a href="#plot_feature_tree-21"><span class="linenos">21</span></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="plot_feature_tree-22"><a href="#plot_feature_tree-22"><span class="linenos">22</span></a>    <span class="n">graph</span> <span class="o">=</span> <span class="n">feature_tree_to_nx</span><span class="p">(</span><span class="n">feature_tree</span><span class="p">)</span>
+</span><span id="plot_feature_tree-23"><a href="#plot_feature_tree-23"><span class="linenos">23</span></a>    <span class="n">pos</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">kamada_kawai_layout</span><span class="p">(</span><span class="n">graph</span><span class="p">)</span>
+</span><span id="plot_feature_tree-24"><a href="#plot_feature_tree-24"><span class="linenos">24</span></a>    <span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_nodes</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="n">pos</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+</span><span id="plot_feature_tree-25"><a href="#plot_feature_tree-25"><span class="linenos">25</span></a>    <span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_edges</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="n">pos</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+</span><span id="plot_feature_tree-26"><a href="#plot_feature_tree-26"><span class="linenos">26</span></a>    <span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_labels</span><span class="p">(</span>
+</span><span id="plot_feature_tree-27"><a href="#plot_feature_tree-27"><span class="linenos">27</span></a>        <span class="n">graph</span><span class="p">,</span>
+</span><span id="plot_feature_tree-28"><a href="#plot_feature_tree-28"><span class="linenos">28</span></a>        <span class="n">pos</span><span class="o">=</span><span class="n">pos</span><span class="p">,</span>
+</span><span id="plot_feature_tree-29"><a href="#plot_feature_tree-29"><span class="linenos">29</span></a>        <span class="n">labels</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">graph</span><span class="o">.</span><span class="n">nodes</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="s2">&quot;label&quot;</span><span class="p">)),</span>
+</span><span id="plot_feature_tree-30"><a href="#plot_feature_tree-30"><span class="linenos">30</span></a>        <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+</span><span id="plot_feature_tree-31"><a href="#plot_feature_tree-31"><span class="linenos">31</span></a>    <span class="p">)</span>
+</span><span id="plot_feature_tree-32"><a href="#plot_feature_tree-32"><span class="linenos">32</span></a>    <span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_edge_labels</span><span class="p">(</span>
+</span><span id="plot_feature_tree-33"><a href="#plot_feature_tree-33"><span class="linenos">33</span></a>        <span class="n">graph</span><span class="p">,</span>
+</span><span id="plot_feature_tree-34"><a href="#plot_feature_tree-34"><span class="linenos">34</span></a>        <span class="n">pos</span><span class="o">=</span><span class="n">pos</span><span class="p">,</span>
+</span><span id="plot_feature_tree-35"><a href="#plot_feature_tree-35"><span class="linenos">35</span></a>        <span class="n">edge_labels</span><span class="o">=</span><span class="p">{(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span> <span class="n">label</span> <span class="k">for</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">label</span><span class="p">)</span> <span class="ow">in</span> <span class="n">graph</span><span class="o">.</span><span class="n">edges</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="s2">&quot;label&quot;</span><span class="p">)},</span>
+</span><span id="plot_feature_tree-36"><a href="#plot_feature_tree-36"><span class="linenos">36</span></a>        <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+</span><span id="plot_feature_tree-37"><a href="#plot_feature_tree-37"><span class="linenos">37</span></a>    <span class="p">)</span>
 </span></pre></div>
 
 
-    
+            <div class="docstring"><p>Plot the tree structure of the feature tree.</p>
+
+<p>The edges of the plotted tree correspond to the features in the feature tree.
+If the features are not specified, i.e. they are potential features,
+then neither are the edges of the tree are undirected.
+If the features are specified, then the edges are directed - pointing
+towards the feature.</p>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>feature_tree:</strong>  The feature tree to plot.</li>
+<li><strong>ax:</strong>  Optional matplotlib axis object.</li>
+</ul>
+</div>
+
 
                 </section>
                 <section id="NXTree">
@@ -156,33 +190,70 @@
     </div>
     <a class="headerlink" href="#feature_tree_to_nx"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="feature_tree_to_nx-9"><a href="#feature_tree_to_nx-9"><span class="linenos"> 9</span></a><span class="k">def</span><span class="w"> </span><span class="nf">feature_tree_to_nx</span><span class="p">(</span><span class="n">feature_tree</span><span class="p">:</span> <span class="n">FeatureTree</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NXTree</span><span class="p">:</span>
-</span><span id="feature_tree_to_nx-10"><a href="#feature_tree_to_nx-10"><span class="linenos">10</span></a>    <span class="n">graph</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span> <span class="k">if</span> <span class="n">_is_oriented</span><span class="p">(</span><span class="n">feature_tree</span><span class="p">)</span> <span class="k">else</span> <span class="n">nx</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>
-</span><span id="feature_tree_to_nx-11"><a href="#feature_tree_to_nx-11"><span class="linenos">11</span></a>    <span class="k">for</span> <span class="n">location</span> <span class="ow">in</span> <span class="n">feature_tree</span><span class="o">.</span><span class="n">locations</span><span class="p">():</span>
-</span><span id="feature_tree_to_nx-12"><a href="#feature_tree_to_nx-12"><span class="linenos">12</span></a>        <span class="n">graph</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span>
-</span><span id="feature_tree_to_nx-13"><a href="#feature_tree_to_nx-13"><span class="linenos">13</span></a>            <span class="n">location</span><span class="o">.</span><span class="n">node_idx</span><span class="p">,</span>
-</span><span id="feature_tree_to_nx-14"><a href="#feature_tree_to_nx-14"><span class="linenos">14</span></a>            <span class="n">associated_tangle</span><span class="o">=</span><span class="n">location</span><span class="o">.</span><span class="n">associated_tangle</span><span class="p">,</span>
-</span><span id="feature_tree_to_nx-15"><a href="#feature_tree_to_nx-15"><span class="linenos">15</span></a>            <span class="n">label</span><span class="o">=</span><span class="n">location</span><span class="o">.</span><span class="n">label</span><span class="p">,</span>
-</span><span id="feature_tree_to_nx-16"><a href="#feature_tree_to_nx-16"><span class="linenos">16</span></a>        <span class="p">)</span>
-</span><span id="feature_tree_to_nx-17"><a href="#feature_tree_to_nx-17"><span class="linenos">17</span></a>    <span class="k">for</span> <span class="n">feature_id</span> <span class="ow">in</span> <span class="n">feature_tree</span><span class="o">.</span><span class="n">feature_ids</span><span class="p">():</span>
-</span><span id="feature_tree_to_nx-18"><a href="#feature_tree_to_nx-18"><span class="linenos">18</span></a>        <span class="n">feature_edge</span> <span class="o">=</span> <span class="n">feature_tree</span><span class="o">.</span><span class="n">get_edge</span><span class="p">(</span><span class="n">feature_id</span><span class="p">)</span>
-</span><span id="feature_tree_to_nx-19"><a href="#feature_tree_to_nx-19"><span class="linenos">19</span></a>        <span class="n">first_node</span><span class="p">,</span> <span class="n">second_node</span> <span class="o">=</span> <span class="p">(</span>
-</span><span id="feature_tree_to_nx-20"><a href="#feature_tree_to_nx-20"><span class="linenos">20</span></a>            <span class="n">feature_tree</span><span class="o">.</span><span class="n">get_node_idx_of_location_containing</span><span class="p">((</span><span class="n">feature_id</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)),</span>
-</span><span id="feature_tree_to_nx-21"><a href="#feature_tree_to_nx-21"><span class="linenos">21</span></a>            <span class="n">feature_tree</span><span class="o">.</span><span class="n">get_node_idx_of_location_containing</span><span class="p">((</span><span class="n">feature_id</span><span class="p">,</span> <span class="mi">1</span><span class="p">)),</span>
-</span><span id="feature_tree_to_nx-22"><a href="#feature_tree_to_nx-22"><span class="linenos">22</span></a>        <span class="p">)</span>
-</span><span id="feature_tree_to_nx-23"><a href="#feature_tree_to_nx-23"><span class="linenos">23</span></a>        <span class="k">if</span> <span class="n">feature_edge</span><span class="o">.</span><span class="n">specification</span> <span class="ow">and</span> <span class="n">feature_edge</span><span class="o">.</span><span class="n">specification</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
-</span><span id="feature_tree_to_nx-24"><a href="#feature_tree_to_nx-24"><span class="linenos">24</span></a>            <span class="n">second_node</span><span class="p">,</span> <span class="n">first_node</span> <span class="o">=</span> <span class="n">first_node</span><span class="p">,</span> <span class="n">second_node</span>
-</span><span id="feature_tree_to_nx-25"><a href="#feature_tree_to_nx-25"><span class="linenos">25</span></a>        <span class="n">graph</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span>
-</span><span id="feature_tree_to_nx-26"><a href="#feature_tree_to_nx-26"><span class="linenos">26</span></a>            <span class="n">first_node</span><span class="p">,</span>
-</span><span id="feature_tree_to_nx-27"><a href="#feature_tree_to_nx-27"><span class="linenos">27</span></a>            <span class="n">second_node</span><span class="p">,</span>
-</span><span id="feature_tree_to_nx-28"><a href="#feature_tree_to_nx-28"><span class="linenos">28</span></a>            <span class="n">feature_id</span><span class="o">=</span><span class="n">feature_id</span><span class="p">,</span>
-</span><span id="feature_tree_to_nx-29"><a href="#feature_tree_to_nx-29"><span class="linenos">29</span></a>            <span class="n">label</span><span class="o">=</span><span class="n">feature_edge</span><span class="o">.</span><span class="n">label</span><span class="p">,</span>
-</span><span id="feature_tree_to_nx-30"><a href="#feature_tree_to_nx-30"><span class="linenos">30</span></a>        <span class="p">)</span>
-</span><span id="feature_tree_to_nx-31"><a href="#feature_tree_to_nx-31"><span class="linenos">31</span></a>
-</span><span id="feature_tree_to_nx-32"><a href="#feature_tree_to_nx-32"><span class="linenos">32</span></a>    <span class="k">return</span> <span class="n">graph</span>
+</span><span id="feature_tree_to_nx-10"><a href="#feature_tree_to_nx-10"><span class="linenos">10</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="feature_tree_to_nx-11"><a href="#feature_tree_to_nx-11"><span class="linenos">11</span></a><span class="sd">    Builds a networkx graph representation of a FeatureTree.</span>
+</span><span id="feature_tree_to_nx-12"><a href="#feature_tree_to_nx-12"><span class="linenos">12</span></a>
+</span><span id="feature_tree_to_nx-13"><a href="#feature_tree_to_nx-13"><span class="linenos">13</span></a><span class="sd">    If the features in the feature_tree are unspecified, i.e. they are potential features, then</span>
+</span><span id="feature_tree_to_nx-14"><a href="#feature_tree_to_nx-14"><span class="linenos">14</span></a><span class="sd">    the graph object is a nx.Graph object. If the features are specified then a directed graph</span>
+</span><span id="feature_tree_to_nx-15"><a href="#feature_tree_to_nx-15"><span class="linenos">15</span></a><span class="sd">    is returned.</span>
+</span><span id="feature_tree_to_nx-16"><a href="#feature_tree_to_nx-16"><span class="linenos">16</span></a>
+</span><span id="feature_tree_to_nx-17"><a href="#feature_tree_to_nx-17"><span class="linenos">17</span></a><span class="sd">    Args:</span>
+</span><span id="feature_tree_to_nx-18"><a href="#feature_tree_to_nx-18"><span class="linenos">18</span></a><span class="sd">        feature_tree: The feature tree to turn into a network graph (or directed graph) object.</span>
+</span><span id="feature_tree_to_nx-19"><a href="#feature_tree_to_nx-19"><span class="linenos">19</span></a>
+</span><span id="feature_tree_to_nx-20"><a href="#feature_tree_to_nx-20"><span class="linenos">20</span></a><span class="sd">    Returns:</span>
+</span><span id="feature_tree_to_nx-21"><a href="#feature_tree_to_nx-21"><span class="linenos">21</span></a><span class="sd">        A networkx graph object which can be used to plot a graph representation of the feature tree.</span>
+</span><span id="feature_tree_to_nx-22"><a href="#feature_tree_to_nx-22"><span class="linenos">22</span></a><span class="sd">        The nodes are the index of the node in the feature_tree, furthermore they have associated_tangle</span>
+</span><span id="feature_tree_to_nx-23"><a href="#feature_tree_to_nx-23"><span class="linenos">23</span></a><span class="sd">        and label attributes.</span>
+</span><span id="feature_tree_to_nx-24"><a href="#feature_tree_to_nx-24"><span class="linenos">24</span></a><span class="sd">        The edges have a feature_id attribute and a label attribute.</span>
+</span><span id="feature_tree_to_nx-25"><a href="#feature_tree_to_nx-25"><span class="linenos">25</span></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="feature_tree_to_nx-26"><a href="#feature_tree_to_nx-26"><span class="linenos">26</span></a>    <span class="n">graph</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span> <span class="k">if</span> <span class="n">_is_oriented</span><span class="p">(</span><span class="n">feature_tree</span><span class="p">)</span> <span class="k">else</span> <span class="n">nx</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>
+</span><span id="feature_tree_to_nx-27"><a href="#feature_tree_to_nx-27"><span class="linenos">27</span></a>    <span class="k">for</span> <span class="n">location</span> <span class="ow">in</span> <span class="n">feature_tree</span><span class="o">.</span><span class="n">locations</span><span class="p">():</span>
+</span><span id="feature_tree_to_nx-28"><a href="#feature_tree_to_nx-28"><span class="linenos">28</span></a>        <span class="n">graph</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span>
+</span><span id="feature_tree_to_nx-29"><a href="#feature_tree_to_nx-29"><span class="linenos">29</span></a>            <span class="n">location</span><span class="o">.</span><span class="n">node_idx</span><span class="p">,</span>
+</span><span id="feature_tree_to_nx-30"><a href="#feature_tree_to_nx-30"><span class="linenos">30</span></a>            <span class="n">associated_tangle</span><span class="o">=</span><span class="n">location</span><span class="o">.</span><span class="n">associated_tangle</span><span class="p">,</span>
+</span><span id="feature_tree_to_nx-31"><a href="#feature_tree_to_nx-31"><span class="linenos">31</span></a>            <span class="n">label</span><span class="o">=</span><span class="n">location</span><span class="o">.</span><span class="n">label</span><span class="p">,</span>
+</span><span id="feature_tree_to_nx-32"><a href="#feature_tree_to_nx-32"><span class="linenos">32</span></a>        <span class="p">)</span>
+</span><span id="feature_tree_to_nx-33"><a href="#feature_tree_to_nx-33"><span class="linenos">33</span></a>    <span class="k">for</span> <span class="n">feature_id</span> <span class="ow">in</span> <span class="n">feature_tree</span><span class="o">.</span><span class="n">feature_ids</span><span class="p">():</span>
+</span><span id="feature_tree_to_nx-34"><a href="#feature_tree_to_nx-34"><span class="linenos">34</span></a>        <span class="n">feature_edge</span> <span class="o">=</span> <span class="n">feature_tree</span><span class="o">.</span><span class="n">get_edge</span><span class="p">(</span><span class="n">feature_id</span><span class="p">)</span>
+</span><span id="feature_tree_to_nx-35"><a href="#feature_tree_to_nx-35"><span class="linenos">35</span></a>        <span class="n">first_node</span><span class="p">,</span> <span class="n">second_node</span> <span class="o">=</span> <span class="p">(</span>
+</span><span id="feature_tree_to_nx-36"><a href="#feature_tree_to_nx-36"><span class="linenos">36</span></a>            <span class="n">feature_tree</span><span class="o">.</span><span class="n">get_node_idx_of_location_containing</span><span class="p">((</span><span class="n">feature_id</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)),</span>
+</span><span id="feature_tree_to_nx-37"><a href="#feature_tree_to_nx-37"><span class="linenos">37</span></a>            <span class="n">feature_tree</span><span class="o">.</span><span class="n">get_node_idx_of_location_containing</span><span class="p">((</span><span class="n">feature_id</span><span class="p">,</span> <span class="mi">1</span><span class="p">)),</span>
+</span><span id="feature_tree_to_nx-38"><a href="#feature_tree_to_nx-38"><span class="linenos">38</span></a>        <span class="p">)</span>
+</span><span id="feature_tree_to_nx-39"><a href="#feature_tree_to_nx-39"><span class="linenos">39</span></a>        <span class="k">if</span> <span class="n">feature_edge</span><span class="o">.</span><span class="n">specification</span> <span class="ow">and</span> <span class="n">feature_edge</span><span class="o">.</span><span class="n">specification</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+</span><span id="feature_tree_to_nx-40"><a href="#feature_tree_to_nx-40"><span class="linenos">40</span></a>            <span class="n">second_node</span><span class="p">,</span> <span class="n">first_node</span> <span class="o">=</span> <span class="n">first_node</span><span class="p">,</span> <span class="n">second_node</span>
+</span><span id="feature_tree_to_nx-41"><a href="#feature_tree_to_nx-41"><span class="linenos">41</span></a>        <span class="n">graph</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span>
+</span><span id="feature_tree_to_nx-42"><a href="#feature_tree_to_nx-42"><span class="linenos">42</span></a>            <span class="n">first_node</span><span class="p">,</span>
+</span><span id="feature_tree_to_nx-43"><a href="#feature_tree_to_nx-43"><span class="linenos">43</span></a>            <span class="n">second_node</span><span class="p">,</span>
+</span><span id="feature_tree_to_nx-44"><a href="#feature_tree_to_nx-44"><span class="linenos">44</span></a>            <span class="n">feature_id</span><span class="o">=</span><span class="n">feature_id</span><span class="p">,</span>
+</span><span id="feature_tree_to_nx-45"><a href="#feature_tree_to_nx-45"><span class="linenos">45</span></a>            <span class="n">label</span><span class="o">=</span><span class="n">feature_edge</span><span class="o">.</span><span class="n">label</span><span class="p">,</span>
+</span><span id="feature_tree_to_nx-46"><a href="#feature_tree_to_nx-46"><span class="linenos">46</span></a>        <span class="p">)</span>
+</span><span id="feature_tree_to_nx-47"><a href="#feature_tree_to_nx-47"><span class="linenos">47</span></a>
+</span><span id="feature_tree_to_nx-48"><a href="#feature_tree_to_nx-48"><span class="linenos">48</span></a>    <span class="k">return</span> <span class="n">graph</span>
 </span></pre></div>
 
 
-    
+            <div class="docstring"><p>Builds a networkx graph representation of a FeatureTree.</p>
+
+<p>If the features in the feature_tree are unspecified, i.e. they are potential features, then
+the graph object is a nx.Graph object. If the features are specified then a directed graph
+is returned.</p>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>feature_tree:</strong>  The feature tree to turn into a network graph (or directed graph) object.</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>A networkx graph object which can be used to plot a graph representation of the feature tree.
+  The nodes are the index of the node in the feature_tree, furthermore they have associated_tangle
+  and label attributes.
+  The edges have a feature_id attribute and a label attribute.</p>
+</blockquote>
+</div>
+
 
                 </section>
                 <section id="plot_tree_of_tangles">
@@ -196,21 +267,37 @@
 
     </div>
     <a class="headerlink" href="#plot_tree_of_tangles"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="plot_tree_of_tangles-27"><a href="#plot_tree_of_tangles-27"><span class="linenos">27</span></a><span class="k">def</span><span class="w"> </span><span class="nf">plot_tree_of_tangles</span><span class="p">(</span>
-</span><span id="plot_tree_of_tangles-28"><a href="#plot_tree_of_tangles-28"><span class="linenos">28</span></a>    <span class="n">tree</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">TreeOfTangles</span><span class="p">,</span> <span class="n">FeatureTree</span><span class="p">],</span>
-</span><span id="plot_tree_of_tangles-29"><a href="#plot_tree_of_tangles-29"><span class="linenos">29</span></a>    <span class="n">ax</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-</span><span id="plot_tree_of_tangles-30"><a href="#plot_tree_of_tangles-30"><span class="linenos">30</span></a><span class="p">):</span>
-</span><span id="plot_tree_of_tangles-31"><a href="#plot_tree_of_tangles-31"><span class="linenos">31</span></a>    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">tree</span><span class="p">,</span> <span class="n">TreeOfTangles</span><span class="p">):</span>
-</span><span id="plot_tree_of_tangles-32"><a href="#plot_tree_of_tangles-32"><span class="linenos">32</span></a>        <span class="n">feature_tree</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">feature_tree</span>
-</span><span id="plot_tree_of_tangles-33"><a href="#plot_tree_of_tangles-33"><span class="linenos">33</span></a>    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">tree</span><span class="p">,</span> <span class="n">FeatureTree</span><span class="p">):</span>
-</span><span id="plot_tree_of_tangles-34"><a href="#plot_tree_of_tangles-34"><span class="linenos">34</span></a>        <span class="n">feature_tree</span> <span class="o">=</span> <span class="n">tree</span>
-</span><span id="plot_tree_of_tangles-35"><a href="#plot_tree_of_tangles-35"><span class="linenos">35</span></a>    <span class="k">else</span><span class="p">:</span>
-</span><span id="plot_tree_of_tangles-36"><a href="#plot_tree_of_tangles-36"><span class="linenos">36</span></a>        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;tree </span><span class="si">{</span><span class="n">tree</span><span class="si">}</span><span class="s2"> must be of type TreeOfTangles or FeatureTree&quot;</span><span class="p">)</span>
-</span><span id="plot_tree_of_tangles-37"><a href="#plot_tree_of_tangles-37"><span class="linenos">37</span></a>    <span class="n">plot_feature_tree</span><span class="p">(</span><span class="n">feature_tree</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="plot_tree_of_tangles-40"><a href="#plot_tree_of_tangles-40"><span class="linenos">40</span></a><span class="k">def</span><span class="w"> </span><span class="nf">plot_tree_of_tangles</span><span class="p">(</span>
+</span><span id="plot_tree_of_tangles-41"><a href="#plot_tree_of_tangles-41"><span class="linenos">41</span></a>    <span class="n">tree</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">TreeOfTangles</span><span class="p">,</span> <span class="n">FeatureTree</span><span class="p">],</span>
+</span><span id="plot_tree_of_tangles-42"><a href="#plot_tree_of_tangles-42"><span class="linenos">42</span></a>    <span class="n">ax</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+</span><span id="plot_tree_of_tangles-43"><a href="#plot_tree_of_tangles-43"><span class="linenos">43</span></a><span class="p">):</span>
+</span><span id="plot_tree_of_tangles-44"><a href="#plot_tree_of_tangles-44"><span class="linenos">44</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="plot_tree_of_tangles-45"><a href="#plot_tree_of_tangles-45"><span class="linenos">45</span></a><span class="sd">    Plot the tree structure of a tree of tangles.</span>
+</span><span id="plot_tree_of_tangles-46"><a href="#plot_tree_of_tangles-46"><span class="linenos">46</span></a>
+</span><span id="plot_tree_of_tangles-47"><a href="#plot_tree_of_tangles-47"><span class="linenos">47</span></a><span class="sd">    Args:</span>
+</span><span id="plot_tree_of_tangles-48"><a href="#plot_tree_of_tangles-48"><span class="linenos">48</span></a><span class="sd">        feature_tree: The tree of tangles or feature tree to plot.</span>
+</span><span id="plot_tree_of_tangles-49"><a href="#plot_tree_of_tangles-49"><span class="linenos">49</span></a><span class="sd">        ax: Optional matplotlib axis object.</span>
+</span><span id="plot_tree_of_tangles-50"><a href="#plot_tree_of_tangles-50"><span class="linenos">50</span></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="plot_tree_of_tangles-51"><a href="#plot_tree_of_tangles-51"><span class="linenos">51</span></a>    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">tree</span><span class="p">,</span> <span class="n">TreeOfTangles</span><span class="p">):</span>
+</span><span id="plot_tree_of_tangles-52"><a href="#plot_tree_of_tangles-52"><span class="linenos">52</span></a>        <span class="n">feature_tree</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">feature_tree</span>
+</span><span id="plot_tree_of_tangles-53"><a href="#plot_tree_of_tangles-53"><span class="linenos">53</span></a>    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">tree</span><span class="p">,</span> <span class="n">FeatureTree</span><span class="p">):</span>
+</span><span id="plot_tree_of_tangles-54"><a href="#plot_tree_of_tangles-54"><span class="linenos">54</span></a>        <span class="n">feature_tree</span> <span class="o">=</span> <span class="n">tree</span>
+</span><span id="plot_tree_of_tangles-55"><a href="#plot_tree_of_tangles-55"><span class="linenos">55</span></a>    <span class="k">else</span><span class="p">:</span>
+</span><span id="plot_tree_of_tangles-56"><a href="#plot_tree_of_tangles-56"><span class="linenos">56</span></a>        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;tree </span><span class="si">{</span><span class="n">tree</span><span class="si">}</span><span class="s2"> must be of type TreeOfTangles or FeatureTree&quot;</span><span class="p">)</span>
+</span><span id="plot_tree_of_tangles-57"><a href="#plot_tree_of_tangles-57"><span class="linenos">57</span></a>    <span class="n">plot_feature_tree</span><span class="p">(</span><span class="n">feature_tree</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
 </span></pre></div>
 
 
-    
+            <div class="docstring"><p>Plot the tree structure of a tree of tangles.</p>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>feature_tree:</strong>  The tree of tangles or feature tree to plot.</li>
+<li><strong>ax:</strong>  Optional matplotlib axis object.</li>
+</ul>
+</div>
+
 
                 </section>
     </main>

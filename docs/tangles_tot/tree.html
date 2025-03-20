@@ -59,9 +59,6 @@
                     <a class="class" href="#TreeOfTangles">TreeOfTangles</a>
                             <ul class="memberlist">
                         <li>
-                                <a class="function" href="#TreeOfTangles.__init__">TreeOfTangles</a>
-                        </li>
-                        <li>
                                 <a class="variable" href="#TreeOfTangles.feature_tree">feature_tree</a>
                         </li>
                         <li>
@@ -158,22 +155,28 @@
                     <h1 class="modulename">
 <a href="./../tangles_tot.html">tangles_tot</a><wbr>.tree    </h1>
 
-                
+                        <div class="docstring"><p>Package containing the core tree of tangles objects.</p>
+</div>
+
                         <input id="mod-tree-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
 
                         <label class="view-source-button" for="mod-tree-view-source"><span>View Source</span></label>
 
-                        <div class="pdoc-code codehilite"><pre><span></span><span id="L-1"><a href="#L-1"><span class="linenos"> 1</span></a><span class="kn">from</span><span class="w"> </span><span class="nn">.build_tot</span><span class="w"> </span><span class="kn">import</span> <span class="n">build_tree_of_tangles</span>
-</span><span id="L-2"><a href="#L-2"><span class="linenos"> 2</span></a><span class="kn">from</span><span class="w"> </span><span class="nn">.tree_of_tangles</span><span class="w"> </span><span class="kn">import</span> <span class="n">TreeOfTangles</span>
-</span><span id="L-3"><a href="#L-3"><span class="linenos"> 3</span></a><span class="kn">from</span><span class="w"> </span><span class="nn">.feature_tree</span><span class="w"> </span><span class="kn">import</span> <span class="n">FeatureTree</span><span class="p">,</span> <span class="n">FeatureEdge</span><span class="p">,</span> <span class="n">Location</span>
+                        <div class="pdoc-code codehilite"><pre><span></span><span id="L-1"><a href="#L-1"><span class="linenos"> 1</span></a><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-2"><a href="#L-2"><span class="linenos"> 2</span></a><span class="sd">Package containing the core tree of tangles objects.</span>
+</span><span id="L-3"><a href="#L-3"><span class="linenos"> 3</span></a><span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-4"><a href="#L-4"><span class="linenos"> 4</span></a>
-</span><span id="L-5"><a href="#L-5"><span class="linenos"> 5</span></a><span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
-</span><span id="L-6"><a href="#L-6"><span class="linenos"> 6</span></a>    <span class="s2">&quot;build_tree_of_tangles&quot;</span><span class="p">,</span>
-</span><span id="L-7"><a href="#L-7"><span class="linenos"> 7</span></a>    <span class="s2">&quot;TreeOfTangles&quot;</span><span class="p">,</span>
-</span><span id="L-8"><a href="#L-8"><span class="linenos"> 8</span></a>    <span class="s2">&quot;FeatureTree&quot;</span><span class="p">,</span>
-</span><span id="L-9"><a href="#L-9"><span class="linenos"> 9</span></a>    <span class="s2">&quot;FeatureEdge&quot;</span><span class="p">,</span>
-</span><span id="L-10"><a href="#L-10"><span class="linenos">10</span></a>    <span class="s2">&quot;Location&quot;</span><span class="p">,</span>
-</span><span id="L-11"><a href="#L-11"><span class="linenos">11</span></a><span class="p">]</span>
+</span><span id="L-5"><a href="#L-5"><span class="linenos"> 5</span></a><span class="kn">from</span><span class="w"> </span><span class="nn">.build_tot</span><span class="w"> </span><span class="kn">import</span> <span class="n">build_tree_of_tangles</span>
+</span><span id="L-6"><a href="#L-6"><span class="linenos"> 6</span></a><span class="kn">from</span><span class="w"> </span><span class="nn">.tree_of_tangles</span><span class="w"> </span><span class="kn">import</span> <span class="n">TreeOfTangles</span>
+</span><span id="L-7"><a href="#L-7"><span class="linenos"> 7</span></a><span class="kn">from</span><span class="w"> </span><span class="nn">.feature_tree</span><span class="w"> </span><span class="kn">import</span> <span class="n">FeatureTree</span><span class="p">,</span> <span class="n">FeatureEdge</span><span class="p">,</span> <span class="n">Location</span>
+</span><span id="L-8"><a href="#L-8"><span class="linenos"> 8</span></a>
+</span><span id="L-9"><a href="#L-9"><span class="linenos"> 9</span></a><span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="L-10"><a href="#L-10"><span class="linenos">10</span></a>    <span class="s2">&quot;build_tree_of_tangles&quot;</span><span class="p">,</span>
+</span><span id="L-11"><a href="#L-11"><span class="linenos">11</span></a>    <span class="s2">&quot;TreeOfTangles&quot;</span><span class="p">,</span>
+</span><span id="L-12"><a href="#L-12"><span class="linenos">12</span></a>    <span class="s2">&quot;FeatureTree&quot;</span><span class="p">,</span>
+</span><span id="L-13"><a href="#L-13"><span class="linenos">13</span></a>    <span class="s2">&quot;FeatureEdge&quot;</span><span class="p">,</span>
+</span><span id="L-14"><a href="#L-14"><span class="linenos">14</span></a>    <span class="s2">&quot;Location&quot;</span><span class="p">,</span>
+</span><span id="L-15"><a href="#L-15"><span class="linenos">15</span></a><span class="p">]</span>
 </span></pre></div>
 
 
@@ -209,38 +212,53 @@
     </div>
     <a class="headerlink" href="#TreeOfTangles"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="TreeOfTangles-5"><a href="#TreeOfTangles-5"><span class="linenos"> 5</span></a><span class="k">class</span><span class="w"> </span><span class="nc">TreeOfTangles</span><span class="p">:</span>
-</span><span id="TreeOfTangles-6"><a href="#TreeOfTangles-6"><span class="linenos"> 6</span></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">feature_tree</span><span class="p">:</span> <span class="n">FeatureTree</span><span class="p">):</span>
-</span><span id="TreeOfTangles-7"><a href="#TreeOfTangles-7"><span class="linenos"> 7</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">feature_tree</span> <span class="o">=</span> <span class="n">feature_tree</span>
+</span><span id="TreeOfTangles-6"><a href="#TreeOfTangles-6"><span class="linenos"> 6</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="TreeOfTangles-7"><a href="#TreeOfTangles-7"><span class="linenos"> 7</span></a><span class="sd">    A tree of tangles.</span>
 </span><span id="TreeOfTangles-8"><a href="#TreeOfTangles-8"><span class="linenos"> 8</span></a>
-</span><span id="TreeOfTangles-9"><a href="#TreeOfTangles-9"><span class="linenos"> 9</span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">default_specification</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">FeatureTree</span><span class="p">:</span>
-</span><span id="TreeOfTangles-10"><a href="#TreeOfTangles-10"><span class="linenos">10</span></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">feature_tree</span><span class="o">.</span><span class="n">with_specification</span><span class="p">(</span>
-</span><span id="TreeOfTangles-11"><a href="#TreeOfTangles-11"><span class="linenos">11</span></a>            <span class="n">specification</span><span class="o">=</span><span class="p">{</span>
-</span><span id="TreeOfTangles-12"><a href="#TreeOfTangles-12"><span class="linenos">12</span></a>                <span class="n">feature_id</span><span class="p">:</span> <span class="mi">1</span> <span class="k">for</span> <span class="n">feature_id</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">feature_tree</span><span class="o">.</span><span class="n">feature_ids</span><span class="p">()</span>
-</span><span id="TreeOfTangles-13"><a href="#TreeOfTangles-13"><span class="linenos">13</span></a>            <span class="p">}</span>
-</span><span id="TreeOfTangles-14"><a href="#TreeOfTangles-14"><span class="linenos">14</span></a>        <span class="p">)</span>
+</span><span id="TreeOfTangles-9"><a href="#TreeOfTangles-9"><span class="linenos"> 9</span></a><span class="sd">    Attribute:</span>
+</span><span id="TreeOfTangles-10"><a href="#TreeOfTangles-10"><span class="linenos">10</span></a><span class="sd">        feature_tree: A FeatureTree containing the (unspecified) features of the tree of tangles.</span>
+</span><span id="TreeOfTangles-11"><a href="#TreeOfTangles-11"><span class="linenos">11</span></a>
+</span><span id="TreeOfTangles-12"><a href="#TreeOfTangles-12"><span class="linenos">12</span></a><span class="sd">    Note:</span>
+</span><span id="TreeOfTangles-13"><a href="#TreeOfTangles-13"><span class="linenos">13</span></a><span class="sd">        TreeOfTangles are not intended to be built using the constructor but instead by using</span>
+</span><span id="TreeOfTangles-14"><a href="#TreeOfTangles-14"><span class="linenos">14</span></a><span class="sd">        one of the factory methods.</span>
+</span><span id="TreeOfTangles-15"><a href="#TreeOfTangles-15"><span class="linenos">15</span></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="TreeOfTangles-16"><a href="#TreeOfTangles-16"><span class="linenos">16</span></a>
+</span><span id="TreeOfTangles-17"><a href="#TreeOfTangles-17"><span class="linenos">17</span></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">feature_tree</span><span class="p">:</span> <span class="n">FeatureTree</span><span class="p">):</span>
+</span><span id="TreeOfTangles-18"><a href="#TreeOfTangles-18"><span class="linenos">18</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="TreeOfTangles-19"><a href="#TreeOfTangles-19"><span class="linenos">19</span></a><span class="sd">        @private</span>
+</span><span id="TreeOfTangles-20"><a href="#TreeOfTangles-20"><span class="linenos">20</span></a><span class="sd">        &quot;&quot;&quot;</span>
+</span><span id="TreeOfTangles-21"><a href="#TreeOfTangles-21"><span class="linenos">21</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">feature_tree</span> <span class="o">=</span> <span class="n">feature_tree</span>
+</span><span id="TreeOfTangles-22"><a href="#TreeOfTangles-22"><span class="linenos">22</span></a>
+</span><span id="TreeOfTangles-23"><a href="#TreeOfTangles-23"><span class="linenos">23</span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">default_specification</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">FeatureTree</span><span class="p">:</span>
+</span><span id="TreeOfTangles-24"><a href="#TreeOfTangles-24"><span class="linenos">24</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="TreeOfTangles-25"><a href="#TreeOfTangles-25"><span class="linenos">25</span></a><span class="sd">        Returns:</span>
+</span><span id="TreeOfTangles-26"><a href="#TreeOfTangles-26"><span class="linenos">26</span></a><span class="sd">            A FeatureTree with every feature being specified by its default specification (1).</span>
+</span><span id="TreeOfTangles-27"><a href="#TreeOfTangles-27"><span class="linenos">27</span></a><span class="sd">        &quot;&quot;&quot;</span>
+</span><span id="TreeOfTangles-28"><a href="#TreeOfTangles-28"><span class="linenos">28</span></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">feature_tree</span><span class="o">.</span><span class="n">with_specification</span><span class="p">(</span>
+</span><span id="TreeOfTangles-29"><a href="#TreeOfTangles-29"><span class="linenos">29</span></a>            <span class="n">specification</span><span class="o">=</span><span class="p">{</span>
+</span><span id="TreeOfTangles-30"><a href="#TreeOfTangles-30"><span class="linenos">30</span></a>                <span class="n">feature_id</span><span class="p">:</span> <span class="mi">1</span> <span class="k">for</span> <span class="n">feature_id</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">feature_tree</span><span class="o">.</span><span class="n">feature_ids</span><span class="p">()</span>
+</span><span id="TreeOfTangles-31"><a href="#TreeOfTangles-31"><span class="linenos">31</span></a>            <span class="p">}</span>
+</span><span id="TreeOfTangles-32"><a href="#TreeOfTangles-32"><span class="linenos">32</span></a>        <span class="p">)</span>
 </span></pre></div>
 
 
-    
+            <div class="docstring"><p>A tree of tangles.</p>
 
-                            <div id="TreeOfTangles.__init__" class="classattr">
-                                        <input id="TreeOfTangles.__init__-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
-<div class="attr function">
-            
-        <span class="name">TreeOfTangles</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">feature_tree</span><span class="p">:</span> <span class="n"><a href="#FeatureTree">FeatureTree</a></span></span>)</span>
+<h6 id="attribute">Attribute:</h6>
 
-                <label class="view-source-button" for="TreeOfTangles.__init__-view-source"><span>View Source</span></label>
+<blockquote>
+  <p>feature_tree: A FeatureTree containing the (unspecified) features of the tree of tangles.</p>
+</blockquote>
 
-    </div>
-    <a class="headerlink" href="#TreeOfTangles.__init__"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="TreeOfTangles.__init__-6"><a href="#TreeOfTangles.__init__-6"><span class="linenos">6</span></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">feature_tree</span><span class="p">:</span> <span class="n">FeatureTree</span><span class="p">):</span>
-</span><span id="TreeOfTangles.__init__-7"><a href="#TreeOfTangles.__init__-7"><span class="linenos">7</span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">feature_tree</span> <span class="o">=</span> <span class="n">feature_tree</span>
-</span></pre></div>
+<h6 id="note">Note:</h6>
+
+<blockquote>
+  <p>TreeOfTangles are not intended to be built using the constructor but instead by using
+  one of the factory methods.</p>
+</blockquote>
+</div>
 
 
-    
-
-                            </div>
                             <div id="TreeOfTangles.feature_tree" class="classattr">
                                 <div class="attr variable">
             <span class="name">feature_tree</span>
@@ -263,16 +281,26 @@
 
     </div>
     <a class="headerlink" href="#TreeOfTangles.default_specification"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="TreeOfTangles.default_specification-9"><a href="#TreeOfTangles.default_specification-9"><span class="linenos"> 9</span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">default_specification</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">FeatureTree</span><span class="p">:</span>
-</span><span id="TreeOfTangles.default_specification-10"><a href="#TreeOfTangles.default_specification-10"><span class="linenos">10</span></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">feature_tree</span><span class="o">.</span><span class="n">with_specification</span><span class="p">(</span>
-</span><span id="TreeOfTangles.default_specification-11"><a href="#TreeOfTangles.default_specification-11"><span class="linenos">11</span></a>            <span class="n">specification</span><span class="o">=</span><span class="p">{</span>
-</span><span id="TreeOfTangles.default_specification-12"><a href="#TreeOfTangles.default_specification-12"><span class="linenos">12</span></a>                <span class="n">feature_id</span><span class="p">:</span> <span class="mi">1</span> <span class="k">for</span> <span class="n">feature_id</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">feature_tree</span><span class="o">.</span><span class="n">feature_ids</span><span class="p">()</span>
-</span><span id="TreeOfTangles.default_specification-13"><a href="#TreeOfTangles.default_specification-13"><span class="linenos">13</span></a>            <span class="p">}</span>
-</span><span id="TreeOfTangles.default_specification-14"><a href="#TreeOfTangles.default_specification-14"><span class="linenos">14</span></a>        <span class="p">)</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="TreeOfTangles.default_specification-23"><a href="#TreeOfTangles.default_specification-23"><span class="linenos">23</span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">default_specification</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">FeatureTree</span><span class="p">:</span>
+</span><span id="TreeOfTangles.default_specification-24"><a href="#TreeOfTangles.default_specification-24"><span class="linenos">24</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="TreeOfTangles.default_specification-25"><a href="#TreeOfTangles.default_specification-25"><span class="linenos">25</span></a><span class="sd">        Returns:</span>
+</span><span id="TreeOfTangles.default_specification-26"><a href="#TreeOfTangles.default_specification-26"><span class="linenos">26</span></a><span class="sd">            A FeatureTree with every feature being specified by its default specification (1).</span>
+</span><span id="TreeOfTangles.default_specification-27"><a href="#TreeOfTangles.default_specification-27"><span class="linenos">27</span></a><span class="sd">        &quot;&quot;&quot;</span>
+</span><span id="TreeOfTangles.default_specification-28"><a href="#TreeOfTangles.default_specification-28"><span class="linenos">28</span></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">feature_tree</span><span class="o">.</span><span class="n">with_specification</span><span class="p">(</span>
+</span><span id="TreeOfTangles.default_specification-29"><a href="#TreeOfTangles.default_specification-29"><span class="linenos">29</span></a>            <span class="n">specification</span><span class="o">=</span><span class="p">{</span>
+</span><span id="TreeOfTangles.default_specification-30"><a href="#TreeOfTangles.default_specification-30"><span class="linenos">30</span></a>                <span class="n">feature_id</span><span class="p">:</span> <span class="mi">1</span> <span class="k">for</span> <span class="n">feature_id</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">feature_tree</span><span class="o">.</span><span class="n">feature_ids</span><span class="p">()</span>
+</span><span id="TreeOfTangles.default_specification-31"><a href="#TreeOfTangles.default_specification-31"><span class="linenos">31</span></a>            <span class="p">}</span>
+</span><span id="TreeOfTangles.default_specification-32"><a href="#TreeOfTangles.default_specification-32"><span class="linenos">32</span></a>        <span class="p">)</span>
 </span></pre></div>
 
 
-    
+            <div class="docstring"><h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>A FeatureTree with every feature being specified by its default specification (1).</p>
+</blockquote>
+</div>
+
 
                             </div>
                 </section>
@@ -288,70 +316,114 @@
 
     </div>
     <a class="headerlink" href="#FeatureTree"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="FeatureTree-22"><a href="#FeatureTree-22"><span class="linenos">22</span></a><span class="nd">@dataclass</span>
-</span><span id="FeatureTree-23"><a href="#FeatureTree-23"><span class="linenos">23</span></a><span class="k">class</span><span class="w"> </span><span class="nc">FeatureTree</span><span class="p">:</span>
-</span><span id="FeatureTree-24"><a href="#FeatureTree-24"><span class="linenos">24</span></a>    <span class="n">_edges</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="n">FeatureId</span><span class="p">,</span> <span class="n">FeatureEdge</span><span class="p">]</span>
-</span><span id="FeatureTree-25"><a href="#FeatureTree-25"><span class="linenos">25</span></a>    <span class="n">_locations</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Location</span><span class="p">]</span>
-</span><span id="FeatureTree-26"><a href="#FeatureTree-26"><span class="linenos">26</span></a>    <span class="n">_locations_of_edge</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="n">FeatureId</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Location</span><span class="p">,</span> <span class="n">Location</span><span class="p">]]</span>
-</span><span id="FeatureTree-27"><a href="#FeatureTree-27"><span class="linenos">27</span></a>
-</span><span id="FeatureTree-28"><a href="#FeatureTree-28"><span class="linenos">28</span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">feature_ids</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">FeatureId</span><span class="p">]:</span>
-</span><span id="FeatureTree-29"><a href="#FeatureTree-29"><span class="linenos">29</span></a>        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_edges</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
-</span><span id="FeatureTree-30"><a href="#FeatureTree-30"><span class="linenos">30</span></a>
-</span><span id="FeatureTree-31"><a href="#FeatureTree-31"><span class="linenos">31</span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_edge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">feature_id</span><span class="p">:</span> <span class="n">FeatureId</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">FeatureEdge</span><span class="p">]:</span>
-</span><span id="FeatureTree-32"><a href="#FeatureTree-32"><span class="linenos">32</span></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edges</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">feature_id</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
-</span><span id="FeatureTree-33"><a href="#FeatureTree-33"><span class="linenos">33</span></a>
-</span><span id="FeatureTree-34"><a href="#FeatureTree-34"><span class="linenos">34</span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">edges</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">FeatureEdge</span><span class="p">]:</span>
-</span><span id="FeatureTree-35"><a href="#FeatureTree-35"><span class="linenos">35</span></a>        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_edges</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
-</span><span id="FeatureTree-36"><a href="#FeatureTree-36"><span class="linenos">36</span></a>
-</span><span id="FeatureTree-37"><a href="#FeatureTree-37"><span class="linenos">37</span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">locations</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">Location</span><span class="p">]:</span>
-</span><span id="FeatureTree-38"><a href="#FeatureTree-38"><span class="linenos">38</span></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_locations</span>
-</span><span id="FeatureTree-39"><a href="#FeatureTree-39"><span class="linenos">39</span></a>
-</span><span id="FeatureTree-40"><a href="#FeatureTree-40"><span class="linenos">40</span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_location</span><span class="p">(</span>
-</span><span id="FeatureTree-41"><a href="#FeatureTree-41"><span class="linenos">41</span></a>        <span class="bp">self</span><span class="p">,</span> <span class="n">node_idx</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">tangle_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TangleId</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
-</span><span id="FeatureTree-42"><a href="#FeatureTree-42"><span class="linenos">42</span></a>    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Location</span><span class="p">]:</span>
-</span><span id="FeatureTree-43"><a href="#FeatureTree-43"><span class="linenos">43</span></a>        <span class="k">if</span> <span class="n">node_idx</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">tangle_id</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="FeatureTree-44"><a href="#FeatureTree-44"><span class="linenos">44</span></a>            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-</span><span id="FeatureTree-45"><a href="#FeatureTree-45"><span class="linenos">45</span></a>                <span class="s2">&quot;to get a location you have to set either the node index or the tangle_id&quot;</span>
-</span><span id="FeatureTree-46"><a href="#FeatureTree-46"><span class="linenos">46</span></a>            <span class="p">)</span>
-</span><span id="FeatureTree-47"><a href="#FeatureTree-47"><span class="linenos">47</span></a>        <span class="k">if</span> <span class="n">node_idx</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">tangle_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="FeatureTree-48"><a href="#FeatureTree-48"><span class="linenos">48</span></a>            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;please input either a node_idx or a tangle_id, not both.&quot;</span><span class="p">)</span>
-</span><span id="FeatureTree-49"><a href="#FeatureTree-49"><span class="linenos">49</span></a>        <span class="k">if</span> <span class="n">node_idx</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="FeatureTree-50"><a href="#FeatureTree-50"><span class="linenos">50</span></a>            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_locations</span><span class="p">[</span><span class="n">node_idx</span><span class="p">]</span>
-</span><span id="FeatureTree-51"><a href="#FeatureTree-51"><span class="linenos">51</span></a>        <span class="k">for</span> <span class="n">location</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_locations</span><span class="p">:</span>
-</span><span id="FeatureTree-52"><a href="#FeatureTree-52"><span class="linenos">52</span></a>            <span class="k">if</span> <span class="n">location</span><span class="o">.</span><span class="n">associated_tangle</span> <span class="o">==</span> <span class="n">tangle_id</span><span class="p">:</span>
-</span><span id="FeatureTree-53"><a href="#FeatureTree-53"><span class="linenos">53</span></a>                <span class="k">return</span> <span class="n">location</span>
-</span><span id="FeatureTree-54"><a href="#FeatureTree-54"><span class="linenos">54</span></a>        <span class="k">return</span> <span class="kc">None</span>
-</span><span id="FeatureTree-55"><a href="#FeatureTree-55"><span class="linenos">55</span></a>
-</span><span id="FeatureTree-56"><a href="#FeatureTree-56"><span class="linenos">56</span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_location_containing</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">feature</span><span class="p">:</span> <span class="n">Feature</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Location</span><span class="p">:</span>
-</span><span id="FeatureTree-57"><a href="#FeatureTree-57"><span class="linenos">57</span></a>        <span class="k">if</span> <span class="n">feature</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-</span><span id="FeatureTree-58"><a href="#FeatureTree-58"><span class="linenos">58</span></a>            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_locations_of_edge</span><span class="p">[</span><span class="n">feature</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="mi">0</span><span class="p">]</span>
-</span><span id="FeatureTree-59"><a href="#FeatureTree-59"><span class="linenos">59</span></a>        <span class="k">if</span> <span class="n">feature</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
-</span><span id="FeatureTree-60"><a href="#FeatureTree-60"><span class="linenos">60</span></a>            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_locations_of_edge</span><span class="p">[</span><span class="n">feature</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="mi">1</span><span class="p">]</span>
-</span><span id="FeatureTree-61"><a href="#FeatureTree-61"><span class="linenos">61</span></a>        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;feature variable </span><span class="si">{</span><span class="n">feature</span><span class="si">}</span><span class="s2"> of type Feature has invalid form&quot;</span><span class="p">)</span>
-</span><span id="FeatureTree-62"><a href="#FeatureTree-62"><span class="linenos">62</span></a>
-</span><span id="FeatureTree-63"><a href="#FeatureTree-63"><span class="linenos">63</span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_node_idx_of_location_containing</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">feature</span><span class="p">:</span> <span class="n">Feature</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-</span><span id="FeatureTree-64"><a href="#FeatureTree-64"><span class="linenos">64</span></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_location_containing</span><span class="p">(</span><span class="n">feature</span><span class="p">)</span><span class="o">.</span><span class="n">node_idx</span>
-</span><span id="FeatureTree-65"><a href="#FeatureTree-65"><span class="linenos">65</span></a>
-</span><span id="FeatureTree-66"><a href="#FeatureTree-66"><span class="linenos">66</span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">with_specification</span><span class="p">(</span>
-</span><span id="FeatureTree-67"><a href="#FeatureTree-67"><span class="linenos">67</span></a>        <span class="bp">self</span><span class="p">,</span> <span class="n">specification</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">[</span><span class="n">FeatureId</span><span class="p">,</span> <span class="n">Specification</span><span class="p">]]</span>
-</span><span id="FeatureTree-68"><a href="#FeatureTree-68"><span class="linenos">68</span></a>    <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;FeatureTree&quot;</span><span class="p">:</span>
-</span><span id="FeatureTree-69"><a href="#FeatureTree-69"><span class="linenos">69</span></a>        <span class="n">specification</span> <span class="o">=</span> <span class="n">specification</span> <span class="ow">or</span> <span class="p">{}</span>
-</span><span id="FeatureTree-70"><a href="#FeatureTree-70"><span class="linenos">70</span></a>        <span class="k">return</span> <span class="n">FeatureTree</span><span class="p">(</span>
-</span><span id="FeatureTree-71"><a href="#FeatureTree-71"><span class="linenos">71</span></a>            <span class="n">_edges</span><span class="o">=</span><span class="p">{</span>
-</span><span id="FeatureTree-72"><a href="#FeatureTree-72"><span class="linenos">72</span></a>                <span class="n">feature_id</span><span class="p">:</span> <span class="n">FeatureEdge</span><span class="p">(</span>
-</span><span id="FeatureTree-73"><a href="#FeatureTree-73"><span class="linenos">73</span></a>                    <span class="n">feature_id</span><span class="o">=</span><span class="n">feature_id</span><span class="p">,</span>
-</span><span id="FeatureTree-74"><a href="#FeatureTree-74"><span class="linenos">74</span></a>                    <span class="n">specification</span><span class="o">=</span><span class="n">specification</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">feature_id</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
-</span><span id="FeatureTree-75"><a href="#FeatureTree-75"><span class="linenos">75</span></a>                    <span class="n">label</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_edges</span><span class="p">[</span><span class="n">feature_id</span><span class="p">]</span><span class="o">.</span><span class="n">label</span><span class="p">,</span>
-</span><span id="FeatureTree-76"><a href="#FeatureTree-76"><span class="linenos">76</span></a>                <span class="p">)</span>
-</span><span id="FeatureTree-77"><a href="#FeatureTree-77"><span class="linenos">77</span></a>                <span class="k">for</span> <span class="n">feature_id</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">feature_ids</span><span class="p">()</span>
-</span><span id="FeatureTree-78"><a href="#FeatureTree-78"><span class="linenos">78</span></a>            <span class="p">},</span>
-</span><span id="FeatureTree-79"><a href="#FeatureTree-79"><span class="linenos">79</span></a>            <span class="n">_locations</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_locations</span><span class="p">,</span>
-</span><span id="FeatureTree-80"><a href="#FeatureTree-80"><span class="linenos">80</span></a>            <span class="n">_locations_of_edge</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_locations_of_edge</span><span class="p">,</span>
-</span><span id="FeatureTree-81"><a href="#FeatureTree-81"><span class="linenos">81</span></a>        <span class="p">)</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="FeatureTree-44"><a href="#FeatureTree-44"><span class="linenos"> 44</span></a><span class="nd">@dataclass</span>
+</span><span id="FeatureTree-45"><a href="#FeatureTree-45"><span class="linenos"> 45</span></a><span class="k">class</span><span class="w"> </span><span class="nc">FeatureTree</span><span class="p">:</span>
+</span><span id="FeatureTree-46"><a href="#FeatureTree-46"><span class="linenos"> 46</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="FeatureTree-47"><a href="#FeatureTree-47"><span class="linenos"> 47</span></a><span class="sd">    Encodes the tree structure of a set of nested features.</span>
+</span><span id="FeatureTree-48"><a href="#FeatureTree-48"><span class="linenos"> 48</span></a>
+</span><span id="FeatureTree-49"><a href="#FeatureTree-49"><span class="linenos"> 49</span></a><span class="sd">    Consists of nodes which are Locations, connected by FeatureEdges.</span>
+</span><span id="FeatureTree-50"><a href="#FeatureTree-50"><span class="linenos"> 50</span></a>
+</span><span id="FeatureTree-51"><a href="#FeatureTree-51"><span class="linenos"> 51</span></a><span class="sd">    The FeatureEdges correspond to the nested features.</span>
+</span><span id="FeatureTree-52"><a href="#FeatureTree-52"><span class="linenos"> 52</span></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="FeatureTree-53"><a href="#FeatureTree-53"><span class="linenos"> 53</span></a>
+</span><span id="FeatureTree-54"><a href="#FeatureTree-54"><span class="linenos"> 54</span></a>    <span class="n">_edges</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="n">FeatureId</span><span class="p">,</span> <span class="n">FeatureEdge</span><span class="p">]</span>
+</span><span id="FeatureTree-55"><a href="#FeatureTree-55"><span class="linenos"> 55</span></a>    <span class="n">_locations</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Location</span><span class="p">]</span>
+</span><span id="FeatureTree-56"><a href="#FeatureTree-56"><span class="linenos"> 56</span></a>    <span class="n">_locations_of_edge</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="n">FeatureId</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Location</span><span class="p">,</span> <span class="n">Location</span><span class="p">]]</span>
+</span><span id="FeatureTree-57"><a href="#FeatureTree-57"><span class="linenos"> 57</span></a>
+</span><span id="FeatureTree-58"><a href="#FeatureTree-58"><span class="linenos"> 58</span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">feature_ids</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">FeatureId</span><span class="p">]:</span>
+</span><span id="FeatureTree-59"><a href="#FeatureTree-59"><span class="linenos"> 59</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;The feature ids of the nested features in the feature tree.&quot;&quot;&quot;</span>
+</span><span id="FeatureTree-60"><a href="#FeatureTree-60"><span class="linenos"> 60</span></a>        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_edges</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+</span><span id="FeatureTree-61"><a href="#FeatureTree-61"><span class="linenos"> 61</span></a>
+</span><span id="FeatureTree-62"><a href="#FeatureTree-62"><span class="linenos"> 62</span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_edge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">feature_id</span><span class="p">:</span> <span class="n">FeatureId</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">FeatureEdge</span><span class="p">]:</span>
+</span><span id="FeatureTree-63"><a href="#FeatureTree-63"><span class="linenos"> 63</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="FeatureTree-64"><a href="#FeatureTree-64"><span class="linenos"> 64</span></a><span class="sd">        Get the edge corresponding to the id of a feature.</span>
+</span><span id="FeatureTree-65"><a href="#FeatureTree-65"><span class="linenos"> 65</span></a>
+</span><span id="FeatureTree-66"><a href="#FeatureTree-66"><span class="linenos"> 66</span></a><span class="sd">        Returns:</span>
+</span><span id="FeatureTree-67"><a href="#FeatureTree-67"><span class="linenos"> 67</span></a><span class="sd">            Either a FeatureEdge if one exists or None if the id of the feature is</span>
+</span><span id="FeatureTree-68"><a href="#FeatureTree-68"><span class="linenos"> 68</span></a><span class="sd">            not contained in the feature_ids of the FeatureTree.</span>
+</span><span id="FeatureTree-69"><a href="#FeatureTree-69"><span class="linenos"> 69</span></a><span class="sd">        &quot;&quot;&quot;</span>
+</span><span id="FeatureTree-70"><a href="#FeatureTree-70"><span class="linenos"> 70</span></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edges</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">feature_id</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+</span><span id="FeatureTree-71"><a href="#FeatureTree-71"><span class="linenos"> 71</span></a>
+</span><span id="FeatureTree-72"><a href="#FeatureTree-72"><span class="linenos"> 72</span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">edges</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">FeatureEdge</span><span class="p">]:</span>
+</span><span id="FeatureTree-73"><a href="#FeatureTree-73"><span class="linenos"> 73</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns a list of all of the edges of the FeatureTree.&quot;&quot;&quot;</span>
+</span><span id="FeatureTree-74"><a href="#FeatureTree-74"><span class="linenos"> 74</span></a>        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_edges</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+</span><span id="FeatureTree-75"><a href="#FeatureTree-75"><span class="linenos"> 75</span></a>
+</span><span id="FeatureTree-76"><a href="#FeatureTree-76"><span class="linenos"> 76</span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">locations</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">Location</span><span class="p">]:</span>
+</span><span id="FeatureTree-77"><a href="#FeatureTree-77"><span class="linenos"> 77</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns a list of all of the nodes of the FeatureTree.&quot;&quot;&quot;</span>
+</span><span id="FeatureTree-78"><a href="#FeatureTree-78"><span class="linenos"> 78</span></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_locations</span>
+</span><span id="FeatureTree-79"><a href="#FeatureTree-79"><span class="linenos"> 79</span></a>
+</span><span id="FeatureTree-80"><a href="#FeatureTree-80"><span class="linenos"> 80</span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_location</span><span class="p">(</span>
+</span><span id="FeatureTree-81"><a href="#FeatureTree-81"><span class="linenos"> 81</span></a>        <span class="bp">self</span><span class="p">,</span> <span class="n">node_idx</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">tangle_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TangleId</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+</span><span id="FeatureTree-82"><a href="#FeatureTree-82"><span class="linenos"> 82</span></a>    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Location</span><span class="p">]:</span>
+</span><span id="FeatureTree-83"><a href="#FeatureTree-83"><span class="linenos"> 83</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="FeatureTree-84"><a href="#FeatureTree-84"><span class="linenos"> 84</span></a><span class="sd">        Gets a location of the FeatureTree either using a node index or a tangle id.</span>
+</span><span id="FeatureTree-85"><a href="#FeatureTree-85"><span class="linenos"> 85</span></a>
+</span><span id="FeatureTree-86"><a href="#FeatureTree-86"><span class="linenos"> 86</span></a><span class="sd">        Raises:</span>
+</span><span id="FeatureTree-87"><a href="#FeatureTree-87"><span class="linenos"> 87</span></a><span class="sd">            Value error if both node_idx and tangle_id or either are specified.</span>
+</span><span id="FeatureTree-88"><a href="#FeatureTree-88"><span class="linenos"> 88</span></a>
+</span><span id="FeatureTree-89"><a href="#FeatureTree-89"><span class="linenos"> 89</span></a><span class="sd">        Returns:</span>
+</span><span id="FeatureTree-90"><a href="#FeatureTree-90"><span class="linenos"> 90</span></a><span class="sd">            A Location if a matching location exists and None otherwise.</span>
+</span><span id="FeatureTree-91"><a href="#FeatureTree-91"><span class="linenos"> 91</span></a><span class="sd">        &quot;&quot;&quot;</span>
+</span><span id="FeatureTree-92"><a href="#FeatureTree-92"><span class="linenos"> 92</span></a>        <span class="k">if</span> <span class="n">node_idx</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">tangle_id</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+</span><span id="FeatureTree-93"><a href="#FeatureTree-93"><span class="linenos"> 93</span></a>            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+</span><span id="FeatureTree-94"><a href="#FeatureTree-94"><span class="linenos"> 94</span></a>                <span class="s2">&quot;to get a location you have to set either the node index or the tangle_id&quot;</span>
+</span><span id="FeatureTree-95"><a href="#FeatureTree-95"><span class="linenos"> 95</span></a>            <span class="p">)</span>
+</span><span id="FeatureTree-96"><a href="#FeatureTree-96"><span class="linenos"> 96</span></a>        <span class="k">if</span> <span class="n">node_idx</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">tangle_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+</span><span id="FeatureTree-97"><a href="#FeatureTree-97"><span class="linenos"> 97</span></a>            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;please input either a node_idx or a tangle_id, not both.&quot;</span><span class="p">)</span>
+</span><span id="FeatureTree-98"><a href="#FeatureTree-98"><span class="linenos"> 98</span></a>        <span class="k">if</span> <span class="n">node_idx</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+</span><span id="FeatureTree-99"><a href="#FeatureTree-99"><span class="linenos"> 99</span></a>            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_locations</span><span class="p">[</span><span class="n">node_idx</span><span class="p">]</span>
+</span><span id="FeatureTree-100"><a href="#FeatureTree-100"><span class="linenos">100</span></a>        <span class="k">for</span> <span class="n">location</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_locations</span><span class="p">:</span>
+</span><span id="FeatureTree-101"><a href="#FeatureTree-101"><span class="linenos">101</span></a>            <span class="k">if</span> <span class="n">location</span><span class="o">.</span><span class="n">associated_tangle</span> <span class="o">==</span> <span class="n">tangle_id</span><span class="p">:</span>
+</span><span id="FeatureTree-102"><a href="#FeatureTree-102"><span class="linenos">102</span></a>                <span class="k">return</span> <span class="n">location</span>
+</span><span id="FeatureTree-103"><a href="#FeatureTree-103"><span class="linenos">103</span></a>        <span class="k">return</span> <span class="kc">None</span>
+</span><span id="FeatureTree-104"><a href="#FeatureTree-104"><span class="linenos">104</span></a>
+</span><span id="FeatureTree-105"><a href="#FeatureTree-105"><span class="linenos">105</span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_location_containing</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">feature</span><span class="p">:</span> <span class="n">Feature</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Location</span><span class="p">:</span>
+</span><span id="FeatureTree-106"><a href="#FeatureTree-106"><span class="linenos">106</span></a>        <span class="k">if</span> <span class="n">feature</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+</span><span id="FeatureTree-107"><a href="#FeatureTree-107"><span class="linenos">107</span></a>            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_locations_of_edge</span><span class="p">[</span><span class="n">feature</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="mi">0</span><span class="p">]</span>
+</span><span id="FeatureTree-108"><a href="#FeatureTree-108"><span class="linenos">108</span></a>        <span class="k">if</span> <span class="n">feature</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+</span><span id="FeatureTree-109"><a href="#FeatureTree-109"><span class="linenos">109</span></a>            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_locations_of_edge</span><span class="p">[</span><span class="n">feature</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="mi">1</span><span class="p">]</span>
+</span><span id="FeatureTree-110"><a href="#FeatureTree-110"><span class="linenos">110</span></a>        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;feature variable </span><span class="si">{</span><span class="n">feature</span><span class="si">}</span><span class="s2"> of type Feature has invalid form&quot;</span><span class="p">)</span>
+</span><span id="FeatureTree-111"><a href="#FeatureTree-111"><span class="linenos">111</span></a>
+</span><span id="FeatureTree-112"><a href="#FeatureTree-112"><span class="linenos">112</span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_node_idx_of_location_containing</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">feature</span><span class="p">:</span> <span class="n">Feature</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span><span id="FeatureTree-113"><a href="#FeatureTree-113"><span class="linenos">113</span></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_location_containing</span><span class="p">(</span><span class="n">feature</span><span class="p">)</span><span class="o">.</span><span class="n">node_idx</span>
+</span><span id="FeatureTree-114"><a href="#FeatureTree-114"><span class="linenos">114</span></a>
+</span><span id="FeatureTree-115"><a href="#FeatureTree-115"><span class="linenos">115</span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">with_specification</span><span class="p">(</span>
+</span><span id="FeatureTree-116"><a href="#FeatureTree-116"><span class="linenos">116</span></a>        <span class="bp">self</span><span class="p">,</span> <span class="n">specification</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">[</span><span class="n">FeatureId</span><span class="p">,</span> <span class="n">Specification</span><span class="p">]]</span>
+</span><span id="FeatureTree-117"><a href="#FeatureTree-117"><span class="linenos">117</span></a>    <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;FeatureTree&quot;</span><span class="p">:</span>
+</span><span id="FeatureTree-118"><a href="#FeatureTree-118"><span class="linenos">118</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="FeatureTree-119"><a href="#FeatureTree-119"><span class="linenos">119</span></a><span class="sd">        Returns a new FeatureTree without specifications, only containing non-specified</span>
+</span><span id="FeatureTree-120"><a href="#FeatureTree-120"><span class="linenos">120</span></a><span class="sd">        partitions if no specification is provided, otherwise orients the</span>
+</span><span id="FeatureTree-121"><a href="#FeatureTree-121"><span class="linenos">121</span></a><span class="sd">        features as specified in the specifiecation.</span>
+</span><span id="FeatureTree-122"><a href="#FeatureTree-122"><span class="linenos">122</span></a>
+</span><span id="FeatureTree-123"><a href="#FeatureTree-123"><span class="linenos">123</span></a><span class="sd">        Args:</span>
+</span><span id="FeatureTree-124"><a href="#FeatureTree-124"><span class="linenos">124</span></a><span class="sd">            specification: Either None or a dictionary mapping EVERY feature id to a specification.</span>
+</span><span id="FeatureTree-125"><a href="#FeatureTree-125"><span class="linenos">125</span></a>
+</span><span id="FeatureTree-126"><a href="#FeatureTree-126"><span class="linenos">126</span></a><span class="sd">        Returns:</span>
+</span><span id="FeatureTree-127"><a href="#FeatureTree-127"><span class="linenos">127</span></a><span class="sd">            a new FeatureTree.</span>
+</span><span id="FeatureTree-128"><a href="#FeatureTree-128"><span class="linenos">128</span></a><span class="sd">        &quot;&quot;&quot;</span>
+</span><span id="FeatureTree-129"><a href="#FeatureTree-129"><span class="linenos">129</span></a>        <span class="n">specification</span> <span class="o">=</span> <span class="n">specification</span> <span class="ow">or</span> <span class="p">{}</span>
+</span><span id="FeatureTree-130"><a href="#FeatureTree-130"><span class="linenos">130</span></a>        <span class="k">return</span> <span class="n">FeatureTree</span><span class="p">(</span>
+</span><span id="FeatureTree-131"><a href="#FeatureTree-131"><span class="linenos">131</span></a>            <span class="n">_edges</span><span class="o">=</span><span class="p">{</span>
+</span><span id="FeatureTree-132"><a href="#FeatureTree-132"><span class="linenos">132</span></a>                <span class="n">feature_id</span><span class="p">:</span> <span class="n">FeatureEdge</span><span class="p">(</span>
+</span><span id="FeatureTree-133"><a href="#FeatureTree-133"><span class="linenos">133</span></a>                    <span class="n">feature_id</span><span class="o">=</span><span class="n">feature_id</span><span class="p">,</span>
+</span><span id="FeatureTree-134"><a href="#FeatureTree-134"><span class="linenos">134</span></a>                    <span class="n">specification</span><span class="o">=</span><span class="n">specification</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">feature_id</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+</span><span id="FeatureTree-135"><a href="#FeatureTree-135"><span class="linenos">135</span></a>                    <span class="n">label</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_edges</span><span class="p">[</span><span class="n">feature_id</span><span class="p">]</span><span class="o">.</span><span class="n">label</span><span class="p">,</span>
+</span><span id="FeatureTree-136"><a href="#FeatureTree-136"><span class="linenos">136</span></a>                <span class="p">)</span>
+</span><span id="FeatureTree-137"><a href="#FeatureTree-137"><span class="linenos">137</span></a>                <span class="k">for</span> <span class="n">feature_id</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">feature_ids</span><span class="p">()</span>
+</span><span id="FeatureTree-138"><a href="#FeatureTree-138"><span class="linenos">138</span></a>            <span class="p">},</span>
+</span><span id="FeatureTree-139"><a href="#FeatureTree-139"><span class="linenos">139</span></a>            <span class="n">_locations</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_locations</span><span class="p">,</span>
+</span><span id="FeatureTree-140"><a href="#FeatureTree-140"><span class="linenos">140</span></a>            <span class="n">_locations_of_edge</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_locations_of_edge</span><span class="p">,</span>
+</span><span id="FeatureTree-141"><a href="#FeatureTree-141"><span class="linenos">141</span></a>        <span class="p">)</span>
 </span></pre></div>
 
 
-    
+            <div class="docstring"><p>Encodes the tree structure of a set of nested features.</p>
+
+<p>Consists of nodes which are Locations, connected by FeatureEdges.</p>
+
+<p>The FeatureEdges correspond to the nested features.</p>
+</div>
+
 
                             <div id="FeatureTree.__init__" class="classattr">
                                 <div class="attr function">
@@ -376,12 +448,15 @@
 
     </div>
     <a class="headerlink" href="#FeatureTree.feature_ids"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="FeatureTree.feature_ids-28"><a href="#FeatureTree.feature_ids-28"><span class="linenos">28</span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">feature_ids</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">FeatureId</span><span class="p">]:</span>
-</span><span id="FeatureTree.feature_ids-29"><a href="#FeatureTree.feature_ids-29"><span class="linenos">29</span></a>        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_edges</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="FeatureTree.feature_ids-58"><a href="#FeatureTree.feature_ids-58"><span class="linenos">58</span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">feature_ids</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">FeatureId</span><span class="p">]:</span>
+</span><span id="FeatureTree.feature_ids-59"><a href="#FeatureTree.feature_ids-59"><span class="linenos">59</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;The feature ids of the nested features in the feature tree.&quot;&quot;&quot;</span>
+</span><span id="FeatureTree.feature_ids-60"><a href="#FeatureTree.feature_ids-60"><span class="linenos">60</span></a>        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_edges</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
 </span></pre></div>
 
 
-    
+            <div class="docstring"><p>The feature ids of the nested features in the feature tree.</p>
+</div>
+
 
                             </div>
                             <div id="FeatureTree.get_edge" class="classattr">
@@ -395,12 +470,28 @@
 
     </div>
     <a class="headerlink" href="#FeatureTree.get_edge"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="FeatureTree.get_edge-31"><a href="#FeatureTree.get_edge-31"><span class="linenos">31</span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_edge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">feature_id</span><span class="p">:</span> <span class="n">FeatureId</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">FeatureEdge</span><span class="p">]:</span>
-</span><span id="FeatureTree.get_edge-32"><a href="#FeatureTree.get_edge-32"><span class="linenos">32</span></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edges</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">feature_id</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="FeatureTree.get_edge-62"><a href="#FeatureTree.get_edge-62"><span class="linenos">62</span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_edge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">feature_id</span><span class="p">:</span> <span class="n">FeatureId</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">FeatureEdge</span><span class="p">]:</span>
+</span><span id="FeatureTree.get_edge-63"><a href="#FeatureTree.get_edge-63"><span class="linenos">63</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="FeatureTree.get_edge-64"><a href="#FeatureTree.get_edge-64"><span class="linenos">64</span></a><span class="sd">        Get the edge corresponding to the id of a feature.</span>
+</span><span id="FeatureTree.get_edge-65"><a href="#FeatureTree.get_edge-65"><span class="linenos">65</span></a>
+</span><span id="FeatureTree.get_edge-66"><a href="#FeatureTree.get_edge-66"><span class="linenos">66</span></a><span class="sd">        Returns:</span>
+</span><span id="FeatureTree.get_edge-67"><a href="#FeatureTree.get_edge-67"><span class="linenos">67</span></a><span class="sd">            Either a FeatureEdge if one exists or None if the id of the feature is</span>
+</span><span id="FeatureTree.get_edge-68"><a href="#FeatureTree.get_edge-68"><span class="linenos">68</span></a><span class="sd">            not contained in the feature_ids of the FeatureTree.</span>
+</span><span id="FeatureTree.get_edge-69"><a href="#FeatureTree.get_edge-69"><span class="linenos">69</span></a><span class="sd">        &quot;&quot;&quot;</span>
+</span><span id="FeatureTree.get_edge-70"><a href="#FeatureTree.get_edge-70"><span class="linenos">70</span></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_edges</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">feature_id</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
 </span></pre></div>
 
 
-    
+            <div class="docstring"><p>Get the edge corresponding to the id of a feature.</p>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>Either a FeatureEdge if one exists or None if the id of the feature is
+  not contained in the feature_ids of the FeatureTree.</p>
+</blockquote>
+</div>
+
 
                             </div>
                             <div id="FeatureTree.edges" class="classattr">
@@ -414,12 +505,15 @@
 
     </div>
     <a class="headerlink" href="#FeatureTree.edges"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="FeatureTree.edges-34"><a href="#FeatureTree.edges-34"><span class="linenos">34</span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">edges</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">FeatureEdge</span><span class="p">]:</span>
-</span><span id="FeatureTree.edges-35"><a href="#FeatureTree.edges-35"><span class="linenos">35</span></a>        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_edges</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="FeatureTree.edges-72"><a href="#FeatureTree.edges-72"><span class="linenos">72</span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">edges</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">FeatureEdge</span><span class="p">]:</span>
+</span><span id="FeatureTree.edges-73"><a href="#FeatureTree.edges-73"><span class="linenos">73</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns a list of all of the edges of the FeatureTree.&quot;&quot;&quot;</span>
+</span><span id="FeatureTree.edges-74"><a href="#FeatureTree.edges-74"><span class="linenos">74</span></a>        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_edges</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
 </span></pre></div>
 
 
-    
+            <div class="docstring"><p>Returns a list of all of the edges of the FeatureTree.</p>
+</div>
+
 
                             </div>
                             <div id="FeatureTree.locations" class="classattr">
@@ -433,12 +527,15 @@
 
     </div>
     <a class="headerlink" href="#FeatureTree.locations"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="FeatureTree.locations-37"><a href="#FeatureTree.locations-37"><span class="linenos">37</span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">locations</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">Location</span><span class="p">]:</span>
-</span><span id="FeatureTree.locations-38"><a href="#FeatureTree.locations-38"><span class="linenos">38</span></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_locations</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="FeatureTree.locations-76"><a href="#FeatureTree.locations-76"><span class="linenos">76</span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">locations</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">Location</span><span class="p">]:</span>
+</span><span id="FeatureTree.locations-77"><a href="#FeatureTree.locations-77"><span class="linenos">77</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns a list of all of the nodes of the FeatureTree.&quot;&quot;&quot;</span>
+</span><span id="FeatureTree.locations-78"><a href="#FeatureTree.locations-78"><span class="linenos">78</span></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_locations</span>
 </span></pre></div>
 
 
-    
+            <div class="docstring"><p>Returns a list of all of the nodes of the FeatureTree.</p>
+</div>
+
 
                             </div>
                             <div id="FeatureTree.get_location" class="classattr">
@@ -452,25 +549,48 @@
 
     </div>
     <a class="headerlink" href="#FeatureTree.get_location"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="FeatureTree.get_location-40"><a href="#FeatureTree.get_location-40"><span class="linenos">40</span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_location</span><span class="p">(</span>
-</span><span id="FeatureTree.get_location-41"><a href="#FeatureTree.get_location-41"><span class="linenos">41</span></a>        <span class="bp">self</span><span class="p">,</span> <span class="n">node_idx</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">tangle_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TangleId</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
-</span><span id="FeatureTree.get_location-42"><a href="#FeatureTree.get_location-42"><span class="linenos">42</span></a>    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Location</span><span class="p">]:</span>
-</span><span id="FeatureTree.get_location-43"><a href="#FeatureTree.get_location-43"><span class="linenos">43</span></a>        <span class="k">if</span> <span class="n">node_idx</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">tangle_id</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="FeatureTree.get_location-44"><a href="#FeatureTree.get_location-44"><span class="linenos">44</span></a>            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-</span><span id="FeatureTree.get_location-45"><a href="#FeatureTree.get_location-45"><span class="linenos">45</span></a>                <span class="s2">&quot;to get a location you have to set either the node index or the tangle_id&quot;</span>
-</span><span id="FeatureTree.get_location-46"><a href="#FeatureTree.get_location-46"><span class="linenos">46</span></a>            <span class="p">)</span>
-</span><span id="FeatureTree.get_location-47"><a href="#FeatureTree.get_location-47"><span class="linenos">47</span></a>        <span class="k">if</span> <span class="n">node_idx</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">tangle_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="FeatureTree.get_location-48"><a href="#FeatureTree.get_location-48"><span class="linenos">48</span></a>            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;please input either a node_idx or a tangle_id, not both.&quot;</span><span class="p">)</span>
-</span><span id="FeatureTree.get_location-49"><a href="#FeatureTree.get_location-49"><span class="linenos">49</span></a>        <span class="k">if</span> <span class="n">node_idx</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-</span><span id="FeatureTree.get_location-50"><a href="#FeatureTree.get_location-50"><span class="linenos">50</span></a>            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_locations</span><span class="p">[</span><span class="n">node_idx</span><span class="p">]</span>
-</span><span id="FeatureTree.get_location-51"><a href="#FeatureTree.get_location-51"><span class="linenos">51</span></a>        <span class="k">for</span> <span class="n">location</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_locations</span><span class="p">:</span>
-</span><span id="FeatureTree.get_location-52"><a href="#FeatureTree.get_location-52"><span class="linenos">52</span></a>            <span class="k">if</span> <span class="n">location</span><span class="o">.</span><span class="n">associated_tangle</span> <span class="o">==</span> <span class="n">tangle_id</span><span class="p">:</span>
-</span><span id="FeatureTree.get_location-53"><a href="#FeatureTree.get_location-53"><span class="linenos">53</span></a>                <span class="k">return</span> <span class="n">location</span>
-</span><span id="FeatureTree.get_location-54"><a href="#FeatureTree.get_location-54"><span class="linenos">54</span></a>        <span class="k">return</span> <span class="kc">None</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="FeatureTree.get_location-80"><a href="#FeatureTree.get_location-80"><span class="linenos"> 80</span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_location</span><span class="p">(</span>
+</span><span id="FeatureTree.get_location-81"><a href="#FeatureTree.get_location-81"><span class="linenos"> 81</span></a>        <span class="bp">self</span><span class="p">,</span> <span class="n">node_idx</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">tangle_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TangleId</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+</span><span id="FeatureTree.get_location-82"><a href="#FeatureTree.get_location-82"><span class="linenos"> 82</span></a>    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Location</span><span class="p">]:</span>
+</span><span id="FeatureTree.get_location-83"><a href="#FeatureTree.get_location-83"><span class="linenos"> 83</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="FeatureTree.get_location-84"><a href="#FeatureTree.get_location-84"><span class="linenos"> 84</span></a><span class="sd">        Gets a location of the FeatureTree either using a node index or a tangle id.</span>
+</span><span id="FeatureTree.get_location-85"><a href="#FeatureTree.get_location-85"><span class="linenos"> 85</span></a>
+</span><span id="FeatureTree.get_location-86"><a href="#FeatureTree.get_location-86"><span class="linenos"> 86</span></a><span class="sd">        Raises:</span>
+</span><span id="FeatureTree.get_location-87"><a href="#FeatureTree.get_location-87"><span class="linenos"> 87</span></a><span class="sd">            Value error if both node_idx and tangle_id or either are specified.</span>
+</span><span id="FeatureTree.get_location-88"><a href="#FeatureTree.get_location-88"><span class="linenos"> 88</span></a>
+</span><span id="FeatureTree.get_location-89"><a href="#FeatureTree.get_location-89"><span class="linenos"> 89</span></a><span class="sd">        Returns:</span>
+</span><span id="FeatureTree.get_location-90"><a href="#FeatureTree.get_location-90"><span class="linenos"> 90</span></a><span class="sd">            A Location if a matching location exists and None otherwise.</span>
+</span><span id="FeatureTree.get_location-91"><a href="#FeatureTree.get_location-91"><span class="linenos"> 91</span></a><span class="sd">        &quot;&quot;&quot;</span>
+</span><span id="FeatureTree.get_location-92"><a href="#FeatureTree.get_location-92"><span class="linenos"> 92</span></a>        <span class="k">if</span> <span class="n">node_idx</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">tangle_id</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+</span><span id="FeatureTree.get_location-93"><a href="#FeatureTree.get_location-93"><span class="linenos"> 93</span></a>            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+</span><span id="FeatureTree.get_location-94"><a href="#FeatureTree.get_location-94"><span class="linenos"> 94</span></a>                <span class="s2">&quot;to get a location you have to set either the node index or the tangle_id&quot;</span>
+</span><span id="FeatureTree.get_location-95"><a href="#FeatureTree.get_location-95"><span class="linenos"> 95</span></a>            <span class="p">)</span>
+</span><span id="FeatureTree.get_location-96"><a href="#FeatureTree.get_location-96"><span class="linenos"> 96</span></a>        <span class="k">if</span> <span class="n">node_idx</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">tangle_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+</span><span id="FeatureTree.get_location-97"><a href="#FeatureTree.get_location-97"><span class="linenos"> 97</span></a>            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;please input either a node_idx or a tangle_id, not both.&quot;</span><span class="p">)</span>
+</span><span id="FeatureTree.get_location-98"><a href="#FeatureTree.get_location-98"><span class="linenos"> 98</span></a>        <span class="k">if</span> <span class="n">node_idx</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+</span><span id="FeatureTree.get_location-99"><a href="#FeatureTree.get_location-99"><span class="linenos"> 99</span></a>            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_locations</span><span class="p">[</span><span class="n">node_idx</span><span class="p">]</span>
+</span><span id="FeatureTree.get_location-100"><a href="#FeatureTree.get_location-100"><span class="linenos">100</span></a>        <span class="k">for</span> <span class="n">location</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_locations</span><span class="p">:</span>
+</span><span id="FeatureTree.get_location-101"><a href="#FeatureTree.get_location-101"><span class="linenos">101</span></a>            <span class="k">if</span> <span class="n">location</span><span class="o">.</span><span class="n">associated_tangle</span> <span class="o">==</span> <span class="n">tangle_id</span><span class="p">:</span>
+</span><span id="FeatureTree.get_location-102"><a href="#FeatureTree.get_location-102"><span class="linenos">102</span></a>                <span class="k">return</span> <span class="n">location</span>
+</span><span id="FeatureTree.get_location-103"><a href="#FeatureTree.get_location-103"><span class="linenos">103</span></a>        <span class="k">return</span> <span class="kc">None</span>
 </span></pre></div>
 
 
-    
+            <div class="docstring"><p>Gets a location of the FeatureTree either using a node index or a tangle id.</p>
+
+<h6 id="raises">Raises:</h6>
+
+<ul>
+<li>Value error if both node_idx and tangle_id or either are specified.</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>A Location if a matching location exists and None otherwise.</p>
+</blockquote>
+</div>
+
 
                             </div>
                             <div id="FeatureTree.get_location_containing" class="classattr">
@@ -484,12 +604,12 @@
 
     </div>
     <a class="headerlink" href="#FeatureTree.get_location_containing"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="FeatureTree.get_location_containing-56"><a href="#FeatureTree.get_location_containing-56"><span class="linenos">56</span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_location_containing</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">feature</span><span class="p">:</span> <span class="n">Feature</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Location</span><span class="p">:</span>
-</span><span id="FeatureTree.get_location_containing-57"><a href="#FeatureTree.get_location_containing-57"><span class="linenos">57</span></a>        <span class="k">if</span> <span class="n">feature</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-</span><span id="FeatureTree.get_location_containing-58"><a href="#FeatureTree.get_location_containing-58"><span class="linenos">58</span></a>            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_locations_of_edge</span><span class="p">[</span><span class="n">feature</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="mi">0</span><span class="p">]</span>
-</span><span id="FeatureTree.get_location_containing-59"><a href="#FeatureTree.get_location_containing-59"><span class="linenos">59</span></a>        <span class="k">if</span> <span class="n">feature</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
-</span><span id="FeatureTree.get_location_containing-60"><a href="#FeatureTree.get_location_containing-60"><span class="linenos">60</span></a>            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_locations_of_edge</span><span class="p">[</span><span class="n">feature</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="mi">1</span><span class="p">]</span>
-</span><span id="FeatureTree.get_location_containing-61"><a href="#FeatureTree.get_location_containing-61"><span class="linenos">61</span></a>        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;feature variable </span><span class="si">{</span><span class="n">feature</span><span class="si">}</span><span class="s2"> of type Feature has invalid form&quot;</span><span class="p">)</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="FeatureTree.get_location_containing-105"><a href="#FeatureTree.get_location_containing-105"><span class="linenos">105</span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_location_containing</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">feature</span><span class="p">:</span> <span class="n">Feature</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Location</span><span class="p">:</span>
+</span><span id="FeatureTree.get_location_containing-106"><a href="#FeatureTree.get_location_containing-106"><span class="linenos">106</span></a>        <span class="k">if</span> <span class="n">feature</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+</span><span id="FeatureTree.get_location_containing-107"><a href="#FeatureTree.get_location_containing-107"><span class="linenos">107</span></a>            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_locations_of_edge</span><span class="p">[</span><span class="n">feature</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="mi">0</span><span class="p">]</span>
+</span><span id="FeatureTree.get_location_containing-108"><a href="#FeatureTree.get_location_containing-108"><span class="linenos">108</span></a>        <span class="k">if</span> <span class="n">feature</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+</span><span id="FeatureTree.get_location_containing-109"><a href="#FeatureTree.get_location_containing-109"><span class="linenos">109</span></a>            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_locations_of_edge</span><span class="p">[</span><span class="n">feature</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="mi">1</span><span class="p">]</span>
+</span><span id="FeatureTree.get_location_containing-110"><a href="#FeatureTree.get_location_containing-110"><span class="linenos">110</span></a>        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;feature variable </span><span class="si">{</span><span class="n">feature</span><span class="si">}</span><span class="s2"> of type Feature has invalid form&quot;</span><span class="p">)</span>
 </span></pre></div>
 
 
@@ -507,8 +627,8 @@
 
     </div>
     <a class="headerlink" href="#FeatureTree.get_node_idx_of_location_containing"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="FeatureTree.get_node_idx_of_location_containing-63"><a href="#FeatureTree.get_node_idx_of_location_containing-63"><span class="linenos">63</span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_node_idx_of_location_containing</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">feature</span><span class="p">:</span> <span class="n">Feature</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-</span><span id="FeatureTree.get_node_idx_of_location_containing-64"><a href="#FeatureTree.get_node_idx_of_location_containing-64"><span class="linenos">64</span></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_location_containing</span><span class="p">(</span><span class="n">feature</span><span class="p">)</span><span class="o">.</span><span class="n">node_idx</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="FeatureTree.get_node_idx_of_location_containing-112"><a href="#FeatureTree.get_node_idx_of_location_containing-112"><span class="linenos">112</span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_node_idx_of_location_containing</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">feature</span><span class="p">:</span> <span class="n">Feature</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span><span id="FeatureTree.get_node_idx_of_location_containing-113"><a href="#FeatureTree.get_node_idx_of_location_containing-113"><span class="linenos">113</span></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_location_containing</span><span class="p">(</span><span class="n">feature</span><span class="p">)</span><span class="o">.</span><span class="n">node_idx</span>
 </span></pre></div>
 
 
@@ -526,26 +646,53 @@
 
     </div>
     <a class="headerlink" href="#FeatureTree.with_specification"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="FeatureTree.with_specification-66"><a href="#FeatureTree.with_specification-66"><span class="linenos">66</span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">with_specification</span><span class="p">(</span>
-</span><span id="FeatureTree.with_specification-67"><a href="#FeatureTree.with_specification-67"><span class="linenos">67</span></a>        <span class="bp">self</span><span class="p">,</span> <span class="n">specification</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">[</span><span class="n">FeatureId</span><span class="p">,</span> <span class="n">Specification</span><span class="p">]]</span>
-</span><span id="FeatureTree.with_specification-68"><a href="#FeatureTree.with_specification-68"><span class="linenos">68</span></a>    <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;FeatureTree&quot;</span><span class="p">:</span>
-</span><span id="FeatureTree.with_specification-69"><a href="#FeatureTree.with_specification-69"><span class="linenos">69</span></a>        <span class="n">specification</span> <span class="o">=</span> <span class="n">specification</span> <span class="ow">or</span> <span class="p">{}</span>
-</span><span id="FeatureTree.with_specification-70"><a href="#FeatureTree.with_specification-70"><span class="linenos">70</span></a>        <span class="k">return</span> <span class="n">FeatureTree</span><span class="p">(</span>
-</span><span id="FeatureTree.with_specification-71"><a href="#FeatureTree.with_specification-71"><span class="linenos">71</span></a>            <span class="n">_edges</span><span class="o">=</span><span class="p">{</span>
-</span><span id="FeatureTree.with_specification-72"><a href="#FeatureTree.with_specification-72"><span class="linenos">72</span></a>                <span class="n">feature_id</span><span class="p">:</span> <span class="n">FeatureEdge</span><span class="p">(</span>
-</span><span id="FeatureTree.with_specification-73"><a href="#FeatureTree.with_specification-73"><span class="linenos">73</span></a>                    <span class="n">feature_id</span><span class="o">=</span><span class="n">feature_id</span><span class="p">,</span>
-</span><span id="FeatureTree.with_specification-74"><a href="#FeatureTree.with_specification-74"><span class="linenos">74</span></a>                    <span class="n">specification</span><span class="o">=</span><span class="n">specification</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">feature_id</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
-</span><span id="FeatureTree.with_specification-75"><a href="#FeatureTree.with_specification-75"><span class="linenos">75</span></a>                    <span class="n">label</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_edges</span><span class="p">[</span><span class="n">feature_id</span><span class="p">]</span><span class="o">.</span><span class="n">label</span><span class="p">,</span>
-</span><span id="FeatureTree.with_specification-76"><a href="#FeatureTree.with_specification-76"><span class="linenos">76</span></a>                <span class="p">)</span>
-</span><span id="FeatureTree.with_specification-77"><a href="#FeatureTree.with_specification-77"><span class="linenos">77</span></a>                <span class="k">for</span> <span class="n">feature_id</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">feature_ids</span><span class="p">()</span>
-</span><span id="FeatureTree.with_specification-78"><a href="#FeatureTree.with_specification-78"><span class="linenos">78</span></a>            <span class="p">},</span>
-</span><span id="FeatureTree.with_specification-79"><a href="#FeatureTree.with_specification-79"><span class="linenos">79</span></a>            <span class="n">_locations</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_locations</span><span class="p">,</span>
-</span><span id="FeatureTree.with_specification-80"><a href="#FeatureTree.with_specification-80"><span class="linenos">80</span></a>            <span class="n">_locations_of_edge</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_locations_of_edge</span><span class="p">,</span>
-</span><span id="FeatureTree.with_specification-81"><a href="#FeatureTree.with_specification-81"><span class="linenos">81</span></a>        <span class="p">)</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="FeatureTree.with_specification-115"><a href="#FeatureTree.with_specification-115"><span class="linenos">115</span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">with_specification</span><span class="p">(</span>
+</span><span id="FeatureTree.with_specification-116"><a href="#FeatureTree.with_specification-116"><span class="linenos">116</span></a>        <span class="bp">self</span><span class="p">,</span> <span class="n">specification</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">[</span><span class="n">FeatureId</span><span class="p">,</span> <span class="n">Specification</span><span class="p">]]</span>
+</span><span id="FeatureTree.with_specification-117"><a href="#FeatureTree.with_specification-117"><span class="linenos">117</span></a>    <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;FeatureTree&quot;</span><span class="p">:</span>
+</span><span id="FeatureTree.with_specification-118"><a href="#FeatureTree.with_specification-118"><span class="linenos">118</span></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="FeatureTree.with_specification-119"><a href="#FeatureTree.with_specification-119"><span class="linenos">119</span></a><span class="sd">        Returns a new FeatureTree without specifications, only containing non-specified</span>
+</span><span id="FeatureTree.with_specification-120"><a href="#FeatureTree.with_specification-120"><span class="linenos">120</span></a><span class="sd">        partitions if no specification is provided, otherwise orients the</span>
+</span><span id="FeatureTree.with_specification-121"><a href="#FeatureTree.with_specification-121"><span class="linenos">121</span></a><span class="sd">        features as specified in the specifiecation.</span>
+</span><span id="FeatureTree.with_specification-122"><a href="#FeatureTree.with_specification-122"><span class="linenos">122</span></a>
+</span><span id="FeatureTree.with_specification-123"><a href="#FeatureTree.with_specification-123"><span class="linenos">123</span></a><span class="sd">        Args:</span>
+</span><span id="FeatureTree.with_specification-124"><a href="#FeatureTree.with_specification-124"><span class="linenos">124</span></a><span class="sd">            specification: Either None or a dictionary mapping EVERY feature id to a specification.</span>
+</span><span id="FeatureTree.with_specification-125"><a href="#FeatureTree.with_specification-125"><span class="linenos">125</span></a>
+</span><span id="FeatureTree.with_specification-126"><a href="#FeatureTree.with_specification-126"><span class="linenos">126</span></a><span class="sd">        Returns:</span>
+</span><span id="FeatureTree.with_specification-127"><a href="#FeatureTree.with_specification-127"><span class="linenos">127</span></a><span class="sd">            a new FeatureTree.</span>
+</span><span id="FeatureTree.with_specification-128"><a href="#FeatureTree.with_specification-128"><span class="linenos">128</span></a><span class="sd">        &quot;&quot;&quot;</span>
+</span><span id="FeatureTree.with_specification-129"><a href="#FeatureTree.with_specification-129"><span class="linenos">129</span></a>        <span class="n">specification</span> <span class="o">=</span> <span class="n">specification</span> <span class="ow">or</span> <span class="p">{}</span>
+</span><span id="FeatureTree.with_specification-130"><a href="#FeatureTree.with_specification-130"><span class="linenos">130</span></a>        <span class="k">return</span> <span class="n">FeatureTree</span><span class="p">(</span>
+</span><span id="FeatureTree.with_specification-131"><a href="#FeatureTree.with_specification-131"><span class="linenos">131</span></a>            <span class="n">_edges</span><span class="o">=</span><span class="p">{</span>
+</span><span id="FeatureTree.with_specification-132"><a href="#FeatureTree.with_specification-132"><span class="linenos">132</span></a>                <span class="n">feature_id</span><span class="p">:</span> <span class="n">FeatureEdge</span><span class="p">(</span>
+</span><span id="FeatureTree.with_specification-133"><a href="#FeatureTree.with_specification-133"><span class="linenos">133</span></a>                    <span class="n">feature_id</span><span class="o">=</span><span class="n">feature_id</span><span class="p">,</span>
+</span><span id="FeatureTree.with_specification-134"><a href="#FeatureTree.with_specification-134"><span class="linenos">134</span></a>                    <span class="n">specification</span><span class="o">=</span><span class="n">specification</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">feature_id</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+</span><span id="FeatureTree.with_specification-135"><a href="#FeatureTree.with_specification-135"><span class="linenos">135</span></a>                    <span class="n">label</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_edges</span><span class="p">[</span><span class="n">feature_id</span><span class="p">]</span><span class="o">.</span><span class="n">label</span><span class="p">,</span>
+</span><span id="FeatureTree.with_specification-136"><a href="#FeatureTree.with_specification-136"><span class="linenos">136</span></a>                <span class="p">)</span>
+</span><span id="FeatureTree.with_specification-137"><a href="#FeatureTree.with_specification-137"><span class="linenos">137</span></a>                <span class="k">for</span> <span class="n">feature_id</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">feature_ids</span><span class="p">()</span>
+</span><span id="FeatureTree.with_specification-138"><a href="#FeatureTree.with_specification-138"><span class="linenos">138</span></a>            <span class="p">},</span>
+</span><span id="FeatureTree.with_specification-139"><a href="#FeatureTree.with_specification-139"><span class="linenos">139</span></a>            <span class="n">_locations</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_locations</span><span class="p">,</span>
+</span><span id="FeatureTree.with_specification-140"><a href="#FeatureTree.with_specification-140"><span class="linenos">140</span></a>            <span class="n">_locations_of_edge</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_locations_of_edge</span><span class="p">,</span>
+</span><span id="FeatureTree.with_specification-141"><a href="#FeatureTree.with_specification-141"><span class="linenos">141</span></a>        <span class="p">)</span>
 </span></pre></div>
 
 
-    
+            <div class="docstring"><p>Returns a new FeatureTree without specifications, only containing non-specified
+partitions if no specification is provided, otherwise orients the
+features as specified in the specifiecation.</p>
+
+<h6 id="arguments">Arguments:</h6>
+
+<ul>
+<li><strong>specification:</strong>  Either None or a dictionary mapping EVERY feature id to a specification.</li>
+</ul>
+
+<h6 id="returns">Returns:</h6>
+
+<blockquote>
+  <p>a new FeatureTree.</p>
+</blockquote>
+</div>
+
 
                             </div>
                 </section>
@@ -563,13 +710,36 @@
     <a class="headerlink" href="#FeatureEdge"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="FeatureEdge-7"><a href="#FeatureEdge-7"><span class="linenos"> 7</span></a><span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </span><span id="FeatureEdge-8"><a href="#FeatureEdge-8"><span class="linenos"> 8</span></a><span class="k">class</span><span class="w"> </span><span class="nc">FeatureEdge</span><span class="p">:</span>
-</span><span id="FeatureEdge-9"><a href="#FeatureEdge-9"><span class="linenos"> 9</span></a>    <span class="n">feature_id</span><span class="p">:</span> <span class="n">FeatureId</span>
-</span><span id="FeatureEdge-10"><a href="#FeatureEdge-10"><span class="linenos">10</span></a>    <span class="n">specification</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Specification</span><span class="p">]</span>
-</span><span id="FeatureEdge-11"><a href="#FeatureEdge-11"><span class="linenos">11</span></a>    <span class="n">label</span><span class="p">:</span> <span class="nb">str</span>
+</span><span id="FeatureEdge-9"><a href="#FeatureEdge-9"><span class="linenos"> 9</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="FeatureEdge-10"><a href="#FeatureEdge-10"><span class="linenos">10</span></a><span class="sd">    An edge of a FeatureTree, corresponds either to a potential</span>
+</span><span id="FeatureEdge-11"><a href="#FeatureEdge-11"><span class="linenos">11</span></a><span class="sd">    feature, a partition, if the specification is None, or</span>
+</span><span id="FeatureEdge-12"><a href="#FeatureEdge-12"><span class="linenos">12</span></a><span class="sd">    to a feature with given specification.</span>
+</span><span id="FeatureEdge-13"><a href="#FeatureEdge-13"><span class="linenos">13</span></a>
+</span><span id="FeatureEdge-14"><a href="#FeatureEdge-14"><span class="linenos">14</span></a><span class="sd">    Attributes:</span>
+</span><span id="FeatureEdge-15"><a href="#FeatureEdge-15"><span class="linenos">15</span></a><span class="sd">        feature_id: the feature id of the edge.</span>
+</span><span id="FeatureEdge-16"><a href="#FeatureEdge-16"><span class="linenos">16</span></a><span class="sd">        specification: either None or the specification of the feature.</span>
+</span><span id="FeatureEdge-17"><a href="#FeatureEdge-17"><span class="linenos">17</span></a><span class="sd">        label: a description of the feature.</span>
+</span><span id="FeatureEdge-18"><a href="#FeatureEdge-18"><span class="linenos">18</span></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="FeatureEdge-19"><a href="#FeatureEdge-19"><span class="linenos">19</span></a>
+</span><span id="FeatureEdge-20"><a href="#FeatureEdge-20"><span class="linenos">20</span></a>    <span class="n">feature_id</span><span class="p">:</span> <span class="n">FeatureId</span>
+</span><span id="FeatureEdge-21"><a href="#FeatureEdge-21"><span class="linenos">21</span></a>    <span class="n">specification</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Specification</span><span class="p">]</span>
+</span><span id="FeatureEdge-22"><a href="#FeatureEdge-22"><span class="linenos">22</span></a>    <span class="n">label</span><span class="p">:</span> <span class="nb">str</span>
 </span></pre></div>
 
 
-    
+            <div class="docstring"><p>An edge of a FeatureTree, corresponds either to a potential
+feature, a partition, if the specification is None, or
+to a feature with given specification.</p>
+
+<h6 id="attributes">Attributes:</h6>
+
+<ul>
+<li><strong>feature_id:</strong>  the feature id of the edge.</li>
+<li><strong>specification:</strong>  either None or the specification of the feature.</li>
+<li><strong>label:</strong>  a description of the feature.</li>
+</ul>
+</div>
+
 
                             <div id="FeatureEdge.__init__" class="classattr">
                                 <div class="attr function">
@@ -629,16 +799,39 @@
 
     </div>
     <a class="headerlink" href="#Location"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="Location-14"><a href="#Location-14"><span class="linenos">14</span></a><span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</span><span id="Location-15"><a href="#Location-15"><span class="linenos">15</span></a><span class="k">class</span><span class="w"> </span><span class="nc">Location</span><span class="p">:</span>
-</span><span id="Location-16"><a href="#Location-16"><span class="linenos">16</span></a>    <span class="n">features</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Feature</span><span class="p">]</span>
-</span><span id="Location-17"><a href="#Location-17"><span class="linenos">17</span></a>    <span class="n">associated_tangle</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TangleId</span><span class="p">]</span>
-</span><span id="Location-18"><a href="#Location-18"><span class="linenos">18</span></a>    <span class="n">node_idx</span><span class="p">:</span> <span class="nb">int</span>
-</span><span id="Location-19"><a href="#Location-19"><span class="linenos">19</span></a>    <span class="n">label</span><span class="p">:</span> <span class="nb">str</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="Location-25"><a href="#Location-25"><span class="linenos">25</span></a><span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="Location-26"><a href="#Location-26"><span class="linenos">26</span></a><span class="k">class</span><span class="w"> </span><span class="nc">Location</span><span class="p">:</span>
+</span><span id="Location-27"><a href="#Location-27"><span class="linenos">27</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="Location-28"><a href="#Location-28"><span class="linenos">28</span></a><span class="sd">    A node of a FeatureTree, corresponds to a location, the minimal features</span>
+</span><span id="Location-29"><a href="#Location-29"><span class="linenos">29</span></a><span class="sd">    contained in the pre-tangles of the partitions contained in the FeatureTree.</span>
+</span><span id="Location-30"><a href="#Location-30"><span class="linenos">30</span></a>
+</span><span id="Location-31"><a href="#Location-31"><span class="linenos">31</span></a><span class="sd">    Attributes:</span>
+</span><span id="Location-32"><a href="#Location-32"><span class="linenos">32</span></a><span class="sd">        features: the list of minimal features.</span>
+</span><span id="Location-33"><a href="#Location-33"><span class="linenos">33</span></a><span class="sd">        associated_tangle: Optionally contains the tangle id of the (unique) maximal tangle which contains the features of this location.</span>
+</span><span id="Location-34"><a href="#Location-34"><span class="linenos">34</span></a><span class="sd">        node_idx: The index of the node in the FeatureTree.</span>
+</span><span id="Location-35"><a href="#Location-35"><span class="linenos">35</span></a><span class="sd">        label: a description of the location.</span>
+</span><span id="Location-36"><a href="#Location-36"><span class="linenos">36</span></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="Location-37"><a href="#Location-37"><span class="linenos">37</span></a>
+</span><span id="Location-38"><a href="#Location-38"><span class="linenos">38</span></a>    <span class="n">features</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Feature</span><span class="p">]</span>
+</span><span id="Location-39"><a href="#Location-39"><span class="linenos">39</span></a>    <span class="n">associated_tangle</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TangleId</span><span class="p">]</span>
+</span><span id="Location-40"><a href="#Location-40"><span class="linenos">40</span></a>    <span class="n">node_idx</span><span class="p">:</span> <span class="nb">int</span>
+</span><span id="Location-41"><a href="#Location-41"><span class="linenos">41</span></a>    <span class="n">label</span><span class="p">:</span> <span class="nb">str</span>
 </span></pre></div>
 
 
-    
+            <div class="docstring"><p>A node of a FeatureTree, corresponds to a location, the minimal features
+contained in the pre-tangles of the partitions contained in the FeatureTree.</p>
+
+<h6 id="attributes">Attributes:</h6>
+
+<ul>
+<li><strong>features:</strong>  the list of minimal features.</li>
+<li><strong>associated_tangle:</strong>  Optionally contains the tangle id of the (unique) maximal tangle which contains the features of this location.</li>
+<li><strong>node_idx:</strong>  The index of the node in the FeatureTree.</li>
+<li><strong>label:</strong>  a description of the location.</li>
+</ul>
+</div>
+
 
                             <div id="Location.__init__" class="classattr">
                                 <div class="attr function">
