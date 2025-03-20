@@ -1,6 +1,6 @@
 def test_tangle_library_imports():
     try:
-        from ._tangles_lib import MetaData, FeatureSystem, Feature
+        from ._tangles_lib import MetaData, FeatureSystem
     except ModuleNotFoundError:
         assert (
             False
