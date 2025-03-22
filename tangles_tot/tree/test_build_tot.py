@@ -90,7 +90,7 @@ def test_build_from_nested(is_le_for_three_star: LessOrEqFunc):
         efficient_distinguishers=np.array([0, 1, 2]),
         is_le=is_le_for_three_star,
     )
-    assert len(feature_tree.edges()) == 3
+    assert len(feature_tree.feature_ids()) == 3
     assert len(feature_tree.locations()) == 4
     assert feature_tree.get_node_idx_of_location_containing(
         (0, 1)

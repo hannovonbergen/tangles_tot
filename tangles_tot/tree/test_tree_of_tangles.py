@@ -1,14 +1,33 @@
+import pytest
 from tangles_tot._testing.feature_trees import three_star
 from .tree_of_tangles import TreeOfTangles
 
 
-def test_feature_tree_of_tot():
-    tot = TreeOfTangles(three_star(False))
-    for edge in tot.feature_tree.edges():
-        assert edge.specification is None
+@pytest.fixture
+def tree_of_tangles() -> TreeOfTangles:
+    return TreeOfTangles(three_star())
 
 
-def test_feature_tree_default_orientation():
-    tot = TreeOfTangles(three_star(False))
-    for edge in tot.default_specification().edges():
-        assert edge.specification == 1
+def test_label_feature_by_id(tree_of_tangles: TreeOfTangles):
+    assert tree_of_tangles.label_features_by_id() == {
+        0: "feature 0",
+        1: "feature 1",
+        2: "feature 2",
+    }
+
+
+def test_label_locations_by_idx(tree_of_tangles: TreeOfTangles):
+    assert tree_of_tangles.label_locations_by_idx() == {
+        0: "location 0",
+        1: "location 1",
+        2: "location 2",
+        3: "location 3",
+    }
+
+
+def test_default_specification(tree_of_tangles: TreeOfTangles):
+    assert tree_of_tangles.default_specification() == {
+        0: 1,
+        1: 1,
+        2: 1,
+    }

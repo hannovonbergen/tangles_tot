@@ -1,25 +1,19 @@
-from tangles_tot.tree import FeatureTree, FeatureEdge, Location
+from tangles_tot.tree import FeatureTree, Location
 
 
-def three_star(oriented: bool) -> FeatureTree:
-    edges = {
-        i: FeatureEdge(
-            feature_id=i, specification=1 if oriented else None, label=f"feature {i}"
-        )
-        for i in range(3)
-    }
+def three_star() -> FeatureTree:
+    edges = [0, 1, 2]
 
     locations = [
         Location(
-            features=[(i, -1)], associated_tangle=i, node_idx=i, label=f"tangle {i}"
+            features=[(i, -1)],
+            node_idx=i,
         )
         for i in range(3)
     ] + [
         Location(
             features=[(0, 1), (1, 1), (2, 1)],
-            associated_tangle=3,
             node_idx=3,
-            label="tangle 3",
         )
     ]
 

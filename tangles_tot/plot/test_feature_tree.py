@@ -4,7 +4,7 @@ from .feature_tree import plot_tree_of_tangles
 
 
 def test_plot_tree_of_tangles_with_feature_tree():
-    plot_tree_of_tangles(three_star(True))
+    plot_tree_of_tangles(three_star())
 
 
 def test_plot_tree_of_tangles_with_invalid_input():
@@ -19,4 +19,4 @@ def test_plot_tree_of_tangles_with_invalid_input():
 
 
 def test_plot_tree_of_tangles_with_tree_of_tangles():
-    plot_tree_of_tangles(TreeOfTangles(three_star(False)))
+    plot_tree_of_tangles(TreeOfTangles(three_star()))

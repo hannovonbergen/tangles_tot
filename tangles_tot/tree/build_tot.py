@@ -3,7 +3,7 @@ import numpy as np
 from tangles_tot._tangles_lib import TangleSweep, LessOrEqFunc
 from tangles_tot._typing import FeatureId, Feature
 from .tree_of_tangles import TreeOfTangles
-from .feature_tree import FeatureTree, FeatureEdge, Location
+from .feature_tree import FeatureTree, Location
 
 
 def build_tree_of_tangles_from_sweep(
@@ -46,12 +46,7 @@ def _build_feature_tree_from_nested_features(
     efficient_distinguishers: np.ndarray,
     is_le: LessOrEqFunc,
 ) -> FeatureTree:
-    _edges = {
-        feature_id: FeatureEdge(
-            feature_id=feature_id, specification=None, label=f"feature {feature_id}"
-        )
-        for feature_id in efficient_distinguishers
-    }
+    _edges = list(efficient_distinguishers)
     _locations, _locations_of_edge = _find_locations(efficient_distinguishers, is_le)
 
     return FeatureTree(
@@ -84,9 +79,7 @@ def _find_locations(nested_feature_ids: np.ndarray, is_le: LessOrEqFunc) -> Feat
         _locations.append(
             Location(
                 features=location_features,
-                associated_tangle=None,
                 node_idx=len(_locations),
-                label=f"tangle {len(_locations)}",
             )
         )
         for feature_id, specification in location_features:
