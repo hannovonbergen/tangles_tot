@@ -1,6 +1,6 @@
 from typing import Union
 from tangles_tot._typing import Feature, FeatureId, Specification
-from .feature_tree import FeatureTree
+from .feature_tree import FeatureTree, Location
 
 FeatureLabels = dict[Union[FeatureId, Feature], str]
 LocationIdx = int
@@ -25,6 +25,12 @@ class TreeOfTangles:
         @private
         """
         self.feature_tree = feature_tree
+
+    def feature_ids(self) -> list[int]:
+        return self.feature_tree.feature_ids()
+
+    def locations(self) -> list[Location]:
+        return self.feature_tree.locations()
 
     def label_features_by_id(self) -> FeatureLabels:
         """

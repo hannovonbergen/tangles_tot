@@ -1,4 +1,4 @@
-from tangles.separations.system import MetaData, FeatureSystem
+from tangles.separations.system import MetaData, FeatureSystem, SetSeparationSystem
 from tangles.search import TangleSweep
 from tangles._tangle import Tangle
 from tangles._typing import LessOrEqFunc
@@ -13,4 +13,5 @@ __all__ = [
     "INF_LABEL",
     "TangleSweep",
     "Tangle",
+    "SetSeparationSystem",
 ]

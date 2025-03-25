@@ -159,7 +159,7 @@ def _are_efficient_distinguishers_nested(
 ) -> bool:
     for i in range(len(efficient_distinguishers)):
         for j in range(i + 1, len(efficient_distinguishers)):
-            if not _is_nested(i, j, is_le):
+            if not _is_nested(efficient_distinguishers[i], efficient_distinguishers[j], is_le):
                 return False
     return True
 
@@ -168,6 +168,6 @@ def _is_nested(feature_1: FeatureId, feature_2: FeatureId, is_le: LessOrEqFunc) 
     return (
         is_le(feature_1, 1, feature_2, 1)
         or is_le(feature_1, -1, feature_2, 1)
-        or is_le(feature_1, -1, feature_2, 1)
+        or is_le(feature_1, 1, feature_2, -1)
         or is_le(feature_1, -1, feature_2, -1)
     )
