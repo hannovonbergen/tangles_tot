@@ -1,6 +1,6 @@
 from typing import Any, Optional, Union
 import numpy as np
-from tangles_tot._tangles_lib import FeatureSystem, CUSTOM_LABEL, INF_LABEL, MetaData
+from tangles_tot._tangles_lib import FeatureSystem, CUSTOM_LABEL, INF_LABEL, MetaData, SetSeparationSystem
 from tangles_tot._typing import Feature
 
 
@@ -51,6 +51,30 @@ class UncrossingFeatureSystem:
             feat_sys=feat_sys,
             original_ids=original_ids,
         )
+    
+    @staticmethod
+    def from_set_separation_system(sep_sys: SetSeparationSystem) -> "UncrossingFeatureSystem":
+        original_ids = []
+        corner_ids = []
+        for i in range(len(sep_sys)):
+            metadata = sep_sys.separation_metadata(i)
+            while metadata:
+                if metadata.type == CUSTOM_LABEL:
+                    original_ids.append(i)
+                    break
+                if metadata.type == INF_LABEL:
+                    corner_ids.append(i)
+                metadata = metadata.next
+        if len(original_ids) == 0 and len(corner_ids) == 0:
+            original_ids = list(range(len(sep_sys)))
+        if len(original_ids) == 0:
+            raise Exception(
+                "could not determine which features were added by uncrossing and which were added by user. You can fix this by adding metadata to your features."
+            )
+        return UncrossingFeatureSystem(
+            feat_sys=sep_sys,
+            original_ids=original_ids,
+        )
 
     def __len__(self) -> int:
         return len(self._feat_sys)
@@ -91,11 +115,11 @@ class UncrossingFeatureSystem:
     def get_metadata_of_original_features(self) -> list[Any]:
         metadata_list = []
         for original_id in self._original_ids:
-            metadata = self._feat_sys.feature_metadata(original_id)
+            metadata = self._feat_sys.separation_metadata(original_id)
             if not metadata or metadata.info is None:
                 metadata_list.append(f"s{original_id}")
             else:
-                metadata_list.append(metadata.info)
+                metadata_list.append(str(metadata.info))
         return metadata_list
 
     def count_big_side(self, feature_id: int) -> int:
@@ -122,7 +146,7 @@ class UncrossingFeatureSystem:
     def feature_metadata(
         self, feature_ids: Union[int, list, np.ndarray, None]
     ) -> MetaData:
-        return self._feat_sys.feature_metadata(feature_ids)
+        return self._feat_sys.separation_metadata(feature_ids)
 
     def is_le(
         self,

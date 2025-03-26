@@ -1,6 +1,6 @@
 from typing import Union, Optional
 import numpy as np
-from tangles_tot._tangles_lib import MetaData, FeatureSystem
+from tangles_tot._tangles_lib import MetaData, FeatureSystem, SetSeparationSystem
 from tangles_tot._typing import Feature
 from tangles_tot.search import UncrossingFeatureSystem
 from .logic import TextTerm, _SemanticTextTerm
@@ -87,6 +87,8 @@ def interpret_feature(
     """
     if isinstance(feat_sys, FeatureSystem):
         feat_sys = UncrossingFeatureSystem.from_feature_system(feat_sys)
+    elif isinstance(feat_sys, SetSeparationSystem):
+        feat_sys = UncrossingFeatureSystem.from_set_separation_system(feat_sys)
     if under_condition is None or len(under_condition) == 0:
         under_condition_feature = None
     else:
