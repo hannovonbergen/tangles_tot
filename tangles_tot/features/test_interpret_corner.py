@@ -2,17 +2,22 @@ import pytest
 import numpy as np
 from tangles_tot._testing import (
     generate_random_features,
+    generate_random_set_separations,
     add_random_corners_to_feat_sys,
 )
-from tangles_tot._tangles_lib import FeatureSystem
+from tangles_tot._tangles_lib import FeatureSystem, SetSeparationSystem
 from tangles_tot.search import UncrossingFeatureSystem
 from .interpret_corner import interpret_feature_array, interpret_feature
 
 
-def test_interpret_feature_array_finds_input():
+@pytest.mark.parametrize(
+    "feature_generation",
+    [generate_random_features] #generate_random_set_separations],
+)
+def test_interpret_feature_array_finds_input(feature_generation):
     num_features = 10
     feature_length = 100
-    features = generate_random_features(num_features, feature_length)
+    features = feature_generation(num_features, feature_length)
     metadata = [str(i) for i in range(num_features)]
     for i in range(num_features):
         assert str(interpret_feature_array(features[:, i], features, metadata)) == str(

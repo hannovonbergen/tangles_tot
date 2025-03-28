@@ -1,6 +1,12 @@
 from typing import Any, Optional, Union
 import numpy as np
-from tangles_tot._tangles_lib import FeatureSystem, CUSTOM_LABEL, INF_LABEL, MetaData, SetSeparationSystem
+from tangles_tot._tangles_lib import (
+    FeatureSystem,
+    CUSTOM_LABEL,
+    INF_LABEL,
+    MetaData,
+    SetSeparationSystem,
+)
 from tangles_tot._typing import Feature
 
 
@@ -51,9 +57,11 @@ class UncrossingFeatureSystem:
             feat_sys=feat_sys,
             original_ids=original_ids,
         )
-    
+
     @staticmethod
-    def from_set_separation_system(sep_sys: SetSeparationSystem) -> "UncrossingFeatureSystem":
+    def from_set_separation_system(
+        sep_sys: SetSeparationSystem,
+    ) -> "UncrossingFeatureSystem":
         original_ids = []
         corner_ids = []
         for i in range(len(sep_sys)):

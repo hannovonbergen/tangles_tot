@@ -159,7 +159,9 @@ def _are_efficient_distinguishers_nested(
 ) -> bool:
     for i in range(len(efficient_distinguishers)):
         for j in range(i + 1, len(efficient_distinguishers)):
-            if not _is_nested(efficient_distinguishers[i], efficient_distinguishers[j], is_le):
+            if not _is_nested(
+                efficient_distinguishers[i], efficient_distinguishers[j], is_le
+            ):
                 return False
     return True
 

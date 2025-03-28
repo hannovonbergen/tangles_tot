@@ -50,9 +50,7 @@ def interpret_feature_array(
     )
     starting_approximation = np.ones(feature.shape, dtype=np.int8)[under_condition == 1]
     return _array_to_term_recursive(
-        sep=feature[under_condition == 1],
-        approximation=starting_approximation,
-        next_term=_SemanticTextTerm.true(len(starting_approximation)),
+        approximation=_SemanticTextTerm.true(len(starting_approximation)),
         rec_log=rec_log,
     ).text
 
@@ -109,35 +107,28 @@ def interpret_feature(
 
 
 def _array_to_term_recursive(
-    sep: np.ndarray,
-    approximation: np.ndarray,
-    next_term: _SemanticTextTerm,
+    approximation: _SemanticTextTerm,
     rec_log: "_RecursionLogic",
 ) -> _SemanticTextTerm:
-    next_sep = np.minimum(sep, next_term.array)
-    next_approx = np.minimum(approximation, next_term.array)
+    next_sep = np.minimum(rec_log._og_sep, approximation.array)
 
-    if np.all(next_approx == next_sep):
-        return next_term
+    if rec_log.is_approximation_correct(approximation.array):
+        return approximation
     if np.all(next_sep == -1):
-        return _SemanticTextTerm.false(sep.shape[0])
+        return _SemanticTextTerm.false(rec_log._og_sep.shape[0])
 
-    new_term = rec_log.find_best_term_extension(sep=next_sep, term=next_approx)
+    new_approximation = rec_log.find_best_term_extension(sep=next_sep, approximation=approximation.array)
 
     first_term = _array_to_term_recursive(
-        sep=next_sep,
-        approximation=next_approx,
-        next_term=new_term,
+        approximation=new_approximation,
         rec_log=rec_log,
     )
     second_term = _array_to_term_recursive(
-        sep=next_sep,
-        approximation=next_approx,
-        next_term=new_term.not_(),
+        approximation=new_approximation.not_(),
         rec_log=rec_log,
     )
-    or_term = rec_log.or_term(first_term, second_term, next_term)
-    and_term = rec_log.and_term(next_term, or_term, approximation)
+    or_term = rec_log.or_term(first_term, second_term, approximation)
+    and_term = rec_log.and_term(approximation, or_term, approximation.array)
     return and_term
 
 
@@ -152,11 +143,14 @@ class _RecursionLogic:
             for i in range(features.shape[1])
         ]
 
+    def is_approximation_correct(self, approximation: np.ndarray) -> bool:
+        return np.all(self._og_sep == approximation)
+
     def find_best_term_extension(
-        self, sep: np.ndarray, term: np.ndarray
+        self, sep: np.ndarray, approximation: np.ndarray
     ) -> _SemanticTextTerm:
-        mask_ab = np.minimum(term, -sep) == 1
-        mask_cd = np.minimum(term, sep) == 1
+        mask_ab = np.minimum(approximation, -sep) == 1
+        mask_cd = np.minimum(approximation, sep) == 1
         a_ar = np.sum(self._features[mask_ab] == 1, axis=0)
         b_ar = np.sum(-self._features[mask_ab] == 1, axis=0)
         c_ar = np.sum(self._features[mask_cd] == 1, axis=0)
@@ -175,16 +169,16 @@ class _RecursionLogic:
         self,
         first_term: _SemanticTextTerm,
         second_term: _SemanticTextTerm,
-        text_term: _SemanticTextTerm,
+        approximation: _SemanticTextTerm,
     ) -> _SemanticTextTerm:
         if np.all(
-            np.minimum(first_term.array, text_term.array)
-            <= np.minimum(second_term.array, text_term.array)
+            np.minimum(first_term.array, approximation.array)
+            <= np.minimum(second_term.array, approximation.array)
         ):
             return second_term
         if np.all(
-            np.minimum(second_term.array, text_term.array)
-            <= np.minimum(first_term.array, text_term.array)
+            np.minimum(second_term.array, approximation.array)
+            <= np.minimum(first_term.array, approximation.array)
         ):
             return first_term
         if second_term.array.sum() <= first_term.array.sum():

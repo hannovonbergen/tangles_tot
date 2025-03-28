@@ -12,7 +12,11 @@ def three_star() -> FeatureTree:
         for i in range(3)
     ] + [
         Location(
-            features=[(0, 1), (1, 1), (2, 1)],
+            features=[
+                (0, 1),
+                (1, 1),
+                (2, 1),
+            ],
             node_idx=3,
         )
     ]
@@ -26,5 +30,7 @@ def three_star() -> FeatureTree:
     }
 
     return FeatureTree(
-        _edges=edges, _locations=locations, _locations_of_edge=locations_of_edge
+        _edges=edges,
+        _locations=locations,
+        _locations_of_edge=locations_of_edge,
     )
