@@ -1,6 +1,9 @@
 .vscode
+.venv
 .pytest_cache
-tangles
+.ropeproject
 
 **/*.pyc
 **/.DS_Store
+
+uv.lock

@@ -1,0 +1,6 @@
+Features which we intend to develop:
+
+- Set Separation System support (convenience style interface)
+- A core package which is easy to use and contains only the most relevant functions
+- More examples in the documentation, if possible even for TOT examples
+- Make the dependencies more finegrained, differentiate between users and developers
