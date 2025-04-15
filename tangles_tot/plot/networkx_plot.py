@@ -1,11 +1,11 @@
 from typing import Union, Optional
 import networkx as nx
 from tangles_tot.tree import (
-    FeatureTree,
     LocationLabels,
     FeatureLabels,
     FeatureSpecification,
 )
+from tangles_tot.core import FeatureTree, DirectedEdge
 
 NXTree = Union[nx.Graph, nx.DiGraph]
 
@@ -41,16 +41,14 @@ def feature_tree_to_nx(
     feature_labels = feature_labels or {}
     feature_specification = feature_specification or {}
     graph = nx.Graph() if not specified else nx.DiGraph()
-    for location in feature_tree.locations():
+    for vertex in feature_tree.tree.vertices:
         graph.add_node(
-            location.node_idx,
-            label=location_labels.get(location.node_idx, None) or "",
+            vertex,
+            label=location_labels.get(vertex, None) or "",
         )
-    for feature_id in feature_tree.feature_ids():
-        first_node, second_node = (
-            feature_tree.get_node_idx_of_location_containing((feature_id, -1)),
-            feature_tree.get_node_idx_of_location_containing((feature_id, 1)),
-        )
+    for edge in feature_tree.tree.edges:
+        first_node, second_node = edge
+        feature_id, _ = feature_tree.alpha(DirectedEdge(source=edge[0], target=edge[1]))
         if feature_specification.get(feature_id, 0) != -1:
             label = (
                 feature_labels.get((feature_id, 1), feature_labels.get(feature_id, ""))

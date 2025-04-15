@@ -12,7 +12,7 @@ from .interpret_corner import interpret_feature_array, interpret_feature
 
 @pytest.mark.parametrize(
     "feature_generation",
-    [generate_random_features] #generate_random_set_separations],
+    [generate_random_features],  # generate_random_set_separations],
 )
 def test_interpret_feature_array_finds_input(feature_generation):
     num_features = 10

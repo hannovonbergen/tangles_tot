@@ -1,12 +1,12 @@
 from typing import Union, Optional, Any
 import networkx as nx
 from tangles_tot.tree import (
-    FeatureTree,
     TreeOfTangles,
     FeatureSpecification,
     FeatureLabels,
     LocationLabels,
 )
+from tangles_tot.core import FeatureTree
 from .networkx_plot import feature_tree_to_nx
 
 

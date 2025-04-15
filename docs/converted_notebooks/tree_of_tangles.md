@@ -12,7 +12,7 @@ plot_tree_of_tangles(tree_of_tangles)
 
 
     
-![png](../docs/converted_notebooks/tree_of_tangles_files/tree_of_tangles_1_0.png)
+![png](../docs/converted_notebooks/../docs/converted_notebooks/tree_of_tangles_files/tree_of_tangles_1_0.png)
     
 
 
@@ -25,7 +25,7 @@ plot_tree_of_tangles(
 
 
     
-![png](../docs/converted_notebooks/tree_of_tangles_files/tree_of_tangles_2_0.png)
+![png](../docs/converted_notebooks/../docs/converted_notebooks/tree_of_tangles_files/tree_of_tangles_2_0.png)
     
 
 

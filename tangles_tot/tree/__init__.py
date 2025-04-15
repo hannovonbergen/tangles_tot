@@ -10,13 +10,10 @@ from .tree_of_tangles import (
     LocationLabels,
     LocationIdx,
 )
-from .feature_tree import FeatureTree, Location
 
 __all__ = [
     "build_tree_of_tangles_from_sweep",
     "TreeOfTangles",
-    "FeatureTree",
-    "Location",
     "FeatureLabels",
     "FeatureSpecification",
     "LocationLabels",

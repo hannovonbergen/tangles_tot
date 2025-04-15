@@ -2,8 +2,8 @@ from typing import Optional
 import numpy as np
 from tangles_tot._tangles_lib import TangleSweep, LessOrEqFunc
 from tangles_tot._typing import FeatureId, Feature
-from .tree_of_tangles import TreeOfTangles
-from .feature_tree import FeatureTree, Location
+from tangles_tot.core import FeatureTree
+from .tree_of_tangles import TreeOfTangles, Location
 
 
 def build_tree_of_tangles_from_sweep(
@@ -30,7 +30,7 @@ def build_tree_of_tangles_from_sweep(
     )
     if not _are_efficient_distinguishers_nested(is_le, efficient_distinguishers):
         raise ValueError(
-            f"The efficient distinguishers of the tangles of the tangle sweep"
+            "The efficient distinguishers of the tangles of the tangle sweep"
             "have not been uncrossed. Please uncross the efficient distinguishers of the tangle sweep"
             "before providing it to the build tree_of_tangles method"
         )

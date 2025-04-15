@@ -1,6 +1,6 @@
 from typing import Union
 from tangles_tot._typing import Feature, FeatureId, Specification
-from .feature_tree import FeatureTree, Location
+from tangles_tot.core import FeatureTree, Location
 
 FeatureLabels = dict[Union[FeatureId, Feature], str]
 LocationIdx = int
@@ -27,10 +27,16 @@ class TreeOfTangles:
         self.feature_tree = feature_tree
 
     def feature_ids(self) -> list[int]:
-        return self.feature_tree.feature_ids()
+        return [
+            self.feature_tree.alpha.feature_id_of(edge)
+            for edge in self.feature_tree.tree.edges
+        ]
 
     def locations(self) -> list[Location]:
-        return self.feature_tree.locations()
+        return [
+            self.feature_tree.get_location_at_vertex(vertex)
+            for vertex in self.feature_tree.tree.vertices
+        ]
 
     def label_features_by_id(self) -> FeatureLabels:
         """
@@ -38,8 +44,7 @@ class TreeOfTangles:
         each feature of the feature tree.
         """
         return {
-            feature_id: f"feature {feature_id}"
-            for feature_id in self.feature_tree.feature_ids()
+            feature_id: f"feature {feature_id}" for feature_id in self.feature_ids()
         }
 
     def label_locations_by_idx(self) -> LocationLabels:
@@ -48,12 +53,11 @@ class TreeOfTangles:
         each location of the feature tree.
         """
         return {
-            location.node_idx: f"location {location.node_idx}"
-            for location in self.feature_tree.locations()
+            vertex: f"location {vertex}" for vertex in self.feature_tree.tree.vertices
         }
 
     def default_specification(self) -> FeatureSpecification:
         """
         Specifies every feature as "1", the default orientation.
         """
-        return {feature_id: 1 for feature_id in self.feature_tree.feature_ids()}
+        return {feature_id: 1 for feature_id in self.feature_ids()}

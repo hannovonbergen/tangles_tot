@@ -121,9 +121,9 @@ class TextTerm:
             A new TextTerm representing the negation.
         """
         if self._text == "true":
-            return "false"
+            return TextTerm("false")
         if self._text == "false":
-            return "true"
+            return TextTerm("true")
         if self._text[0] == "¬":
             new_text = self._text[1:]
             if new_text[0] == "(" and new_text[-1] == ")":

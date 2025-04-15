@@ -117,7 +117,9 @@ def _array_to_term_recursive(
     if np.all(next_sep == -1):
         return _SemanticTextTerm.false(rec_log._og_sep.shape[0])
 
-    new_approximation = rec_log.find_best_term_extension(sep=next_sep, approximation=approximation.array)
+    new_approximation = rec_log.find_best_term_extension(
+        sep=next_sep, approximation=approximation.array
+    )
 
     first_term = _array_to_term_recursive(
         approximation=new_approximation,
