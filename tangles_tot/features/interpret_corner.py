@@ -1,9 +1,8 @@
 from typing import Union, Optional
 import numpy as np
-from tangles_tot._tangles_lib import MetaData, FeatureSystem, SetSeparationSystem
-from tangles_tot._typing import Feature
+from tangles.separations import MetaData, FeatureSystem, SetSeparationSystem
+from tangles_tot.core import Feature
 from tangles_tot.search import UncrossingFeatureSystem
-from .logic import TextTerm, _SemanticTextTerm
 
 MetaDataType = Union[str, TextTerm, MetaData]
 FeatureArray = np.ndarray

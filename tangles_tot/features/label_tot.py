@@ -1,6 +1,6 @@
 from typing import Union
 import numpy as np
-from tangles_tot._tangles_lib import FeatureSystem
+from tangles.separations import FeatureSystem
 from tangles_tot.search import UncrossingFeatureSystem
 from tangles_tot.tree import TreeOfTangles, FeatureLabels, LocationLabels
 from .interpret_corner import interpret_feature, interpret_feature_array

@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from tangles_tot._typing import Feature, FeatureId
+from .typing import Feature, FeatureId
 
 Vertex = int
 Edge = tuple[Vertex, Vertex]

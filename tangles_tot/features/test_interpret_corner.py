@@ -5,7 +5,7 @@ from tangles_tot._testing import (
     generate_random_set_separations,
     add_random_corners_to_feat_sys,
 )
-from tangles_tot._tangles_lib import FeatureSystem, SetSeparationSystem
+from tangles.separations import FeatureSystem, SetSeparationSystem
 from tangles_tot.search import UncrossingFeatureSystem
 from .interpret_corner import interpret_feature_array, interpret_feature
 

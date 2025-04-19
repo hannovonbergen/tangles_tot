@@ -1,19 +1,11 @@
-from .feature_tree import (
-    Graph,
-    Alpha,
-    FeatureTree,
-    Location,
-    DirectedEdge,
-    Vertex,
-    Edge,
-)
+from . import feature_tree, logic
+from .typing import Feature, FeatureId, TangleId, Specification
 
 __all__ = [
-    "Graph",
-    "Alpha",
-    "FeatureTree",
-    "Location",
-    "DirectedEdge",
-    "Vertex",
-    "Edge",
+    "feature_tree",
+    "Feature",
+    "FeatureId",
+    "TangleId",
+    "Specification",
+    "logic",
 ]

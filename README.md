@@ -1,9 +1,18 @@
 # Installation
 
-We recommend using [uv](https://docs.astral.sh/uv/)
+We recommend using [uv](https://docs.astral.sh/uv/) to install the dependencies as specified in the pyproject.toml.
 
-1. Install the dependencies as specified in the pyproject.toml
-2. Install the tangles library from https://github.com/tangle-software/tangles.git
+In the case of uv you would use
+```bash
+    uv venv .venv
+```
+to create a virtual environment, which you could then activate.
+
+Afterwards use
+```bash
+    uv sync
+```
+to install the dependencies.
 
 # Examples
 

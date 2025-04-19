@@ -2,6 +2,19 @@
 .. include:: ../README.md
 """
 
-from . import features, plot, search, tree, core
+from . import features, plot, search, tree
 
-__all__ = ["features", "plot", "search", "tree"] + core.__all__
+from .core import feature_tree, logic, Feature, FeatureId, Specification, TangleId
+
+__all__ = [
+    "features",
+    "plot",
+    "search",
+    "tree",
+    "feature_tree",
+    "logic",
+    "Feature",
+    "FeatureId",
+    "Specification",
+    "TangleId",
+]
