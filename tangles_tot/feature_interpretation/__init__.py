@@ -4,7 +4,6 @@ It contains functionality for reconstructing interpretations for the corners add
 by the tree of tangles uncrossing algorithm.
 """
 
-from .logic import TextTerm
 from .interpret_corner import interpret_feature, interpret_feature_array
 from .label_tot import (
     label_corners_using_logic_term,
@@ -13,7 +12,6 @@ from .label_tot import (
 )
 
 __all__ = [
-    "TextTerm",
     "interpret_feature",
     "interpret_feature_array",
     "label_corners_using_logic_term",

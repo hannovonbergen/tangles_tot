@@ -1,6 +1,6 @@
 from typing import Union
 import numpy as np
-from tangles_tot._tangles_lib import FeatureSystem, SetSeparationSystem
+from tangles.separations import FeatureSystem, SetSeparationSystem
 
 SPECIFICATION_SET = np.array([1, -1], dtype=np.int8)
 SET_SEPARATION_SPECIFICATION_SET = np.array([1, 0, -1], dtype=np.int8)

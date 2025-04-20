@@ -1,6 +1,6 @@
 from typing import Union
 import numpy as np
-from tangles.separations import FeatureSystem
+from tangles.separations import FeatureSystem, SetSeparationSystem
 from tangles_tot.search import UncrossingFeatureSystem
 from tangles_tot.tree import TreeOfTangles, FeatureLabels, LocationLabels
 from .interpret_corner import interpret_feature, interpret_feature_array
@@ -8,7 +8,7 @@ from .interpret_corner import interpret_feature, interpret_feature_array
 
 def label_corners_using_logic_term(
     tree_of_tangles: TreeOfTangles,
-    feat_sys: Union[FeatureSystem, UncrossingFeatureSystem],
+    feat_sys: Union[FeatureSystem, SetSeparationSystem],
 ) -> FeatureLabels:
     feature_labels = {}
 

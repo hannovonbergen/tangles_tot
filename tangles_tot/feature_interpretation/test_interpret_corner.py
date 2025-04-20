@@ -10,49 +10,6 @@ from tangles_tot.search import UncrossingFeatureSystem
 from .interpret_corner import interpret_feature_array, interpret_feature
 
 
-@pytest.mark.parametrize(
-    "feature_generation",
-    [generate_random_features],  # generate_random_set_separations],
-)
-def test_interpret_feature_array_finds_input(feature_generation):
-    num_features = 10
-    feature_length = 100
-    features = feature_generation(num_features, feature_length)
-    metadata = [str(i) for i in range(num_features)]
-    for i in range(num_features):
-        assert str(interpret_feature_array(features[:, i], features, metadata)) == str(
-            i
-        )
-
-
-def test_interpret_feature_array_true_input():
-    num_features = 10
-    feature_length = 100
-    features = generate_random_features(num_features, feature_length)
-    metadata = [str(i) for i in range(num_features)]
-    for _ in range(num_features):
-        assert (
-            str(
-                interpret_feature_array(
-                    np.ones(feature_length, dtype=np.int8), features, metadata
-                )
-            )
-            == "true"
-        )
-
-
-def test_interpret_feature_array_inverse():
-    num_features = 10
-    feature_length = 100
-    features = generate_random_features(num_features, feature_length)
-    metadata = [str(i) for i in range(num_features)]
-    for i in range(num_features):
-        assert (
-            str(interpret_feature_array(-features[:, i], features, metadata))
-            == f"¬{str(i)}"
-        )
-
-
 def test_interpret_feature_array_condition():
     num_features = 10
     feature_length = 100

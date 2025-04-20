@@ -1,4 +1,6 @@
 from dataclasses import dataclass
+import numpy as np
+from tangles.search.extending_tangles import LessOrEqFunc
 from .typing import Feature, FeatureId
 
 Vertex = int
@@ -84,6 +86,12 @@ class FeatureTree:
         self.tree = tree
         self.alpha = alpha
 
+    @staticmethod
+    def from_nested_features(nested_feature_ids: np.ndarray, is_le: LessOrEqFunc) -> "FeatureTree":
+        if not _are_features_nested(nested_feature_ids, is_le):
+            raise ValueError("provided features are not nested")
+        return _build_feature_tree(nested_feature_ids, is_le)
+
     def get_location_at_vertex(self, vertex: Vertex) -> Location:
         return Location(
             features=[
@@ -93,3 +101,9 @@ class FeatureTree:
             ],
             vertex=vertex,
         )
+
+def _are_features_nested(nested_feature_ids: np.ndarray, is_le: LessOrEqFunc) -> bool:
+    pass
+
+def _build_feature_tree(nested_feature_ids: np.ndarray, is_le: LessOrEqFunc) -> FeatureTree:
+    pass

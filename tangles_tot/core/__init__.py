@@ -1,4 +1,4 @@
-from . import feature_tree, logic
+from . import feature_tree, reconstruct_term
 from .typing import Feature, FeatureId, TangleId, Specification
 
 __all__ = [
@@ -7,5 +7,5 @@ __all__ = [
     "FeatureId",
     "TangleId",
     "Specification",
-    "logic",
+    "reconstruct_term",
 ]

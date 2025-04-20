@@ -6,7 +6,7 @@ from tangles_tot.tree import (
     FeatureLabels,
     LocationLabels,
 )
-from tangles_tot.core import FeatureTree
+from tangles_tot.core.feature_tree import FeatureTree
 from .networkx_plot import feature_tree_to_nx
 
 

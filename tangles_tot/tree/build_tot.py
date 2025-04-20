@@ -1,9 +1,10 @@
 from typing import Optional
 import numpy as np
-from tangles_tot._tangles_lib import TangleSweep, LessOrEqFunc
-from tangles_tot._typing import FeatureId, Feature
-from tangles_tot.core import FeatureTree
-from .tree_of_tangles import TreeOfTangles, Location
+from tangles import TangleSweep
+from tangles._typing import LessOrEqFunc
+from tangles_tot.core import FeatureId, Feature
+from tangles_tot.core.feature_tree import FeatureTree, Location
+from .tree_of_tangles import TreeOfTangles
 
 
 def build_tree_of_tangles_from_sweep(

@@ -1,13 +1,14 @@
 from typing import Any, Optional, Union
 import numpy as np
-from tangles_tot._tangles_lib import (
+from tangles.separations import (
     FeatureSystem,
-    CUSTOM_LABEL,
-    INF_LABEL,
     MetaData,
     SetSeparationSystem,
 )
-from tangles_tot._typing import Feature
+from tangles_tot.core import Feature
+
+CUSTOM_LABEL = "custom"
+INF_LABEL = "inf"
 
 
 class UncrossingFeatureSystem:

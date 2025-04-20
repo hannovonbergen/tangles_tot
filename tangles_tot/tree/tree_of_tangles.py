@@ -1,6 +1,6 @@
 from typing import Union
-from tangles_tot._typing import Feature, FeatureId, Specification
-from tangles_tot.core import FeatureTree, Location
+from tangles_tot.core import Feature, FeatureId, Specification
+from tangles_tot.core.feature_tree import FeatureTree, Location
 
 FeatureLabels = dict[Union[FeatureId, Feature], str]
 LocationIdx = int

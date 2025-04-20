@@ -1,5 +1,5 @@
 import numpy as np
-from tangles_tot._tangles_lib import FeatureSystem
+from tangles.separations import FeatureSystem
 from tangles_tot._testing import (
     generate_random_features,
     add_random_corners_to_feat_sys,

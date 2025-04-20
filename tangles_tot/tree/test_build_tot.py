@@ -1,7 +1,8 @@
 import pytest
 import numpy as np
-from tangles_tot._tangles_lib import TangleSweep, LessOrEqFunc
-from tangles_tot._typing import FeatureId, Specification
+from tangles import TangleSweep
+from tangles._typing import LessOrEqFunc
+from tangles_tot import FeatureId, Specification
 from .build_tot import (
     build_tree_of_tangles_from_sweep,
     _build_feature_tree_from_nested_features,

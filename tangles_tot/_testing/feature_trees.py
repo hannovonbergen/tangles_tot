@@ -1,4 +1,4 @@
-from tangles_tot.core import FeatureTree, Graph, Alpha, DirectedEdge
+from tangles_tot.core.feature_tree import FeatureTree, Graph, Alpha, DirectedEdge
 
 
 def three_star() -> FeatureTree:

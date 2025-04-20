@@ -2,17 +2,24 @@
 .. include:: ../README.md
 """
 
-from . import features, plot, search, tree
+from . import feature_interpretation, plot, search, tree
 
-from .core import feature_tree, logic, Feature, FeatureId, Specification, TangleId
+from .core import (
+    feature_tree,
+    reconstruct_term,
+    Feature,
+    FeatureId,
+    Specification,
+    TangleId,
+)
 
 __all__ = [
-    "features",
+    "feature_interpretation",
     "plot",
     "search",
     "tree",
     "feature_tree",
-    "logic",
+    "reconstruct_term",
     "Feature",
     "FeatureId",
     "Specification",

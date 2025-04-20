@@ -5,7 +5,7 @@ from tangles_tot.tree import (
     FeatureLabels,
     FeatureSpecification,
 )
-from tangles_tot.core import FeatureTree, DirectedEdge
+from tangles_tot.core.feature_tree import FeatureTree, DirectedEdge
 
 NXTree = Union[nx.Graph, nx.DiGraph]
 
