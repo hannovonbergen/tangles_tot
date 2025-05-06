@@ -2,7 +2,7 @@
 .. include:: ../README.md
 """
 
-from . import feature_interpretation, plot, search, tree
+from . import plot, search, tree
 
 from .core import (
     feature_tree,
@@ -14,7 +14,6 @@ from .core import (
 )
 
 __all__ = [
-    "feature_interpretation",
     "plot",
     "search",
     "tree",
