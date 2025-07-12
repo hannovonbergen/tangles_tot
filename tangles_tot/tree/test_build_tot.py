@@ -5,8 +5,8 @@ from tangles._typing import LessOrEqFunc
 from tangles_tot import FeatureId, Specification
 from .build_tot import (
     build_tree_of_tangles_from_sweep,
-    _build_feature_tree_from_nested_features,
 )
+from tangles_tot.core.feature_tree import _build_feature_tree_from_nested_features
 
 
 def test_build_tot_from_sweep_checks_for_tangle_sweep_type():
