@@ -1,4 +1,5 @@
 from tangles.search.extending_tangles import LessOrEqFunc as LEFunc
+from tangles.separations import SetSeparationSystem, FeatureSystem
 from typing import Union, Literal
 
 FeatureId = int

@@ -144,7 +144,7 @@ def _find_best_term_extension(
     d_ar = np.sum(original_vectors[target == -1] == -1, axis=0)
     taboo = np.all(original_vectors[target != 0] != 0, axis=0)
     triviality_factor = (p_ar != 0) * (n_ar != 0) * taboo
-    print(triviality_factor)
+
     nested_bias = np.maximum(a_ar * triviality_factor * (c_ar == 0), triviality_factor * b_ar * (d_ar == 0))
     if np.any(nested_bias) > 0:
         return np.argmax(nested_bias)
